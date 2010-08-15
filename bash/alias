@@ -1,0 +1,7 @@
+#!/bin/bash
+#
+# aliases, by default.
+
+# enable colors for ls and dir
+alias ls='ls --color=auto'
+alias dir='dir --color=auto'
