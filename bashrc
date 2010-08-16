@@ -30,6 +30,6 @@ if [ -e "$HOME/.dircolors" ]; then
 fi
 
 # finally enable all aliases.
-if [ -e "$MYDOTFILES/bash/alias" ]; then
-   source "$MYDOTFILES/bash/alias"
+if [ -e "$MYDOTFILES/bash.d/alias" ]; then
+   source "$MYDOTFILES/bash.d/alias"
 fi
