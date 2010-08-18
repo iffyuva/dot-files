@@ -82,7 +82,7 @@
 (require 'coding)
 
 ;; my-org-mode
-;; (require 'org-config)
+(require 'org-config)
 
 ;;; Other customizations.
 
