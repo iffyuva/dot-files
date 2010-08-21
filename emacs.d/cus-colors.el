@@ -10,4 +10,7 @@
                         :foreground "white" :background "dark green"
                         :stipple nil :inherit nil)))))
 
+ ;; dont link org-document-title height.
+(set-face-attribute 'org-document-title nil :height 1.0)
+
 (provide 'cus-colors)
