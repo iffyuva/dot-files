@@ -50,8 +50,8 @@
              (concat top-dir "/org-files/capture.org")
              (concat top-dir "/org-files/ten2six.org")))
       (setq org-default-notes-file
-            (concat top-dir "/org-files/capture.org"))
-      (message "Can't find org-files, just check your system")))
+            (concat top-dir "/org-files/capture.org")))
+  (message "Can't find org-files, just check your system"))
 
 ;; org-capture {replaced remember-el}
 (require 'org-capture)
