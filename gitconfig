@@ -1,3 +1,11 @@
 [user]
 	name = Yuva
 	email = gnuyuva@gmail.com
+[color]
+	branch = true
+	diff = true
+	status = true
+[color "status"]
+	added = green
+	changed = cyan
+	untracked = magenta
