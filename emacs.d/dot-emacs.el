@@ -61,23 +61,6 @@
 (setq comint-completion-addsuffix t)
 (setq comint-eol-on-send t)
 
-;; custom faces
-(custom-set-faces
- '(default ((t (:inherit nil
-                         :stipple nil
-                         :background "dark green"
-                         :foreground "white"
-                         :inverse-video nil
-                         :box nil
-                         :strike-through nil
-                         :overline nil
-                         :underline nil
-                         :slant normal
-                         :weight normal :height 100
-                         :width normal
-                         :foundry "outline"
-                         :family "DejaVu Sans Mono")))))
-
 ;; coding customizations
 (require 'coding)
 
@@ -95,6 +78,9 @@
         (string-match "eod" uname-host))
     (require 'ten2six))
 
+
+;; custom-colors
+(require 'cus-colors)
 
 ;;; provide this package.
 (message "Loading dot-emacs...done")
