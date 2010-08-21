@@ -1,4 +1,4 @@
-;; dot-emacs
+;; dot-emacs        -*- emacs-lisp -*-
 (setq dot-files
       (replace-regexp-in-string
        "\n" ""                          ; remove '\n' at end.
