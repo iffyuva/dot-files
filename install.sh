@@ -11,11 +11,16 @@ for f in $FILES; do
 done
 
 # well, nt-emacs can't recognize symbolic links :-(
+# also, autocrlf = true for git {dirty stuff}
 UNAME_S=$(uname -s)
 if [ "CYGWIN_NT-5.1" = "$UNAME_S" ]; then
    echo "removing .emacs and installing emacs"
    rm $HOME/.emacs
    cp $(pwd)/emacs $HOME/emacs
+
+   echo "installing gitconfig for windows"
+   rm $HOME/.gitconfig
+   ln -s $(pwd)/gitconfig.cyg $HOME/.gitconfig
 fi
 
 
