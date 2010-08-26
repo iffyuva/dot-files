@@ -20,7 +20,7 @@ for d in $(ls /opt); do
 
    # update MANPATH with share/man.
    if [ -d "/opt/$d/share/man" ]; then
-      export MANPATH=/opt/$d/share/man:$PATH
+      export MANPATH=/opt/$d/share/man:$MANPATH
    fi
 done
 
