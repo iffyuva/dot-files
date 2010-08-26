@@ -3,6 +3,12 @@
 ;; my coding related stuff!
 
 
+;; Indentation = 3 spaces, i like 3.
+(setq-default tab-width 3)
+(setq-default sh-basic-offset 3)
+(setq-default perl-indent-level 3)
+
+
 ;; i love this mode!
 (defun yuva/cpp-mode ()
   "C/C++ mode for me!"
