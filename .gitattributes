@@ -1,0 +1,8 @@
+# attribute patterns.
+
+# ignore crlf endings for shell-script files, as on windows,
+# cygwin bash needs scripts with only lf endings.
+install.sh     -crlf
+bash_profile   -crlf
+bashrc         -crlf
+bash.d/alias   -crlf
