@@ -10,6 +10,14 @@ for f in $FILES; do
    ln -s $(pwd)/$f $HOME/.$f
 done
 
+# well, nt-emacs can't recognize symbolic links :-(
+UNAME_S=$(uname -s)
+if [ "CYGWIN_NT-5.1" = "$UNAME_S" ]; then
+   echo "removing .emacs and installing emacs"
+   rm $HOME/.emacs
+   cp $(pwd)/emacs $HOME/emacs
+fi
+
 
 # Helper taken from bash-completions to check for installed programs.
 have()
