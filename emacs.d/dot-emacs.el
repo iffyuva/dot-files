@@ -62,7 +62,7 @@
 (setq comint-eol-on-send t)
 
 ;; coding customizations
-(require 'coding)
+(require 'mad-coding)
 
 ;; my-org-mode
 (require 'org-config)

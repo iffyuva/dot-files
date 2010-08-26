@@ -25,4 +25,4 @@
        '(("\\.\\(cpp\\|hpp\\|c\\|h\\|inl\\)$" . yuva/cpp-mode))
        auto-mode-alist))
 
-(provide 'coding)
+(provide 'mad-coding)
