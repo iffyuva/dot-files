@@ -29,6 +29,5 @@ have()
 
 # install texmf customizations.
 # https://help.ubuntu.com/community/LaTeX
-mkdir $HOME/texmf
 cp -rf texmf $HOME/
 have texhash && texhash $HOME/texmf
