@@ -24,6 +24,18 @@ for d in $(ls /opt); do
    fi
 done
 
+# add android paths
+export PATH=$HOME/android-sdk/android/tools:$PATH
+export PATH=$HOME/android-sdk/android/platform-tools:$PATH
+
+# add ec2 related env variables
+export EC2_HOME=$HOME/.ec2
+export PATH=$PATH:$EC2_HOME/bin
+export EC2_PRIVATE_KEY=`ls $EC2_HOME/pk-*.pem`
+export EC2_CERT=`ls $EC2_HOME/cert-*.pem`
+export JAVA_HOME=/usr/lib/jvm/java-6-sun
+
+
 # hate bold characters in ls or dir.
 if [ -e "$HOME/.dircolors" ]; then
    eval `dircolors -b $HOME/.dircolors`

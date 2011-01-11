@@ -23,6 +23,7 @@
 (setq auto-mode-alist
       (append
        '(("\\.\\(cpp\\|hpp\\|c\\|h\\|inl\\)$" . yuva/cpp-mode))
+       '(("Rakefile$" . ruby-mode))
        auto-mode-alist))
 
 (provide 'mad-coding)
