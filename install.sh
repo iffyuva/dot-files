@@ -3,7 +3,7 @@
 # installs all the files to $HOME directory.
 
 FILES="bash_profile bashrc dircolors emacs \
-gitconfig"
+gitconfig gnus"
 
 # just create links in home directory!
 for f in $FILES; do
@@ -16,7 +16,7 @@ UNAME_S=$(uname -s)
 if [ "CYGWIN_NT-5.1" = "$UNAME_S" ]; then
    echo "removing .emacs and installing emacs"
    rm $HOME/.emacs
-   cp $(pwd)/emacs $HOME/emacs
+   cp $(pwd)/emacs $HOME/.emacs
 
    echo "installing gitconfig for windows"
    rm $HOME/.gitconfig
