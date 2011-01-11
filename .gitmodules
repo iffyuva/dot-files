@@ -7,3 +7,6 @@
 [submodule "emacs.d/auto-complete"]
 	path = emacs.d/auto-complete
 	url = http://cx4a.org/repo/auto-complete.git
+[submodule "emacs.d/ruby-mode"]
+	path = emacs.d/ruby-mode
+	url = git://github.com/gnuyuva/ruby-mode.git

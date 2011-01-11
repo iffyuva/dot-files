@@ -18,13 +18,9 @@
   (c-set-style "stroustrup")
   (setq c-basic-offset 3))
 
-;; append the list.
-;; regexp for .cpp, .hpp, .c, .h or .inl
-(setq auto-mode-alist
-      (append
-       '(("\\.\\(cpp\\|hpp\\|c\\|h\\|inl\\)$" . yk-cpp-mode))
-       '(("Rakefile$" . ruby-mode))
-       auto-mode-alist))
+;; add latest ruby-mode
+(add-to-list 'load-path (concat top-dir "/ruby-mode"))
+(require 'ruby-mode)
 
 ;; add yasnippets.
 (add-to-list 'load-path (concat top-dir "/yasnippet"))
@@ -40,5 +36,12 @@
 (require 'auto-complete-config)
 (ac-config-default)
 
+;; append the list.
+;; regexp for .cpp, .hpp, .c, .h or .inl
+(setq auto-mode-alist
+      (append
+       '(("\\.\\(cpp\\|hpp\\|c\\|h\\|inl\\)$" . yk-cpp-mode))
+       '(("Rakefile$" . ruby-mode))
+       auto-mode-alist))
 
 (provide 'mad-coding)
