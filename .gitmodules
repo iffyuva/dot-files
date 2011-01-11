@@ -4,3 +4,6 @@
 [submodule "emacs.d/yasnippet"]
 	path = emacs.d/yasnippet
 	url = git://github.com/emacsmirror/yasnippet.git
+[submodule "emacs.d/auto-complete"]
+	path = emacs.d/auto-complete
+	url = http://cx4a.org/repo/auto-complete.git

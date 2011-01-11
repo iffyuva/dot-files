@@ -33,4 +33,12 @@
 (setq yas/snippet-dirs (concat top-dir "/yasnippet/snippets"))
 (yas/load-directory yas/snippet-dirs)
 
+;; add auto-complete mode.
+(add-to-list 'load-path (concat top-dir "/auto-complete"))
+(require 'auto-complete)
+(add-to-list 'ac-dictionary-directories (concat top-dir "/auto-complete/dict"))
+(require 'auto-complete-config)
+(ac-config-default)
+
+
 (provide 'mad-coding)
