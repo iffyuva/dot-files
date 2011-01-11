@@ -10,7 +10,7 @@
 
 
 ;; i love this mode!
-(defun yuva/cpp-mode ()
+(defun yk-cpp-mode ()
   "C/C++ mode for me!"
   (interactive)
   (c++-mode)
@@ -22,8 +22,15 @@
 ;; regexp for .cpp, .hpp, .c, .h or .inl
 (setq auto-mode-alist
       (append
-       '(("\\.\\(cpp\\|hpp\\|c\\|h\\|inl\\)$" . yuva/cpp-mode))
+       '(("\\.\\(cpp\\|hpp\\|c\\|h\\|inl\\)$" . yk-cpp-mode))
        '(("Rakefile$" . ruby-mode))
        auto-mode-alist))
+
+;; add yasnippets.
+(add-to-list 'load-path (concat top-dir "/yasnippet"))
+(require 'yasnippet)
+(yas/initialize)
+(setq yas/snippet-dirs (concat top-dir "/yasnippet/snippets"))
+(yas/load-directory yas/snippet-dirs)
 
 (provide 'mad-coding)

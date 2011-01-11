@@ -1,3 +1,6 @@
 [submodule "emacs.d/org-mode"]
 	path = emacs.d/org-mode
 	url = git://repo.or.cz/org-mode.git
+[submodule "emacs.d/yasnippet"]
+	path = emacs.d/yasnippet
+	url = git://github.com/emacsmirror/yasnippet.git
