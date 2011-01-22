@@ -82,6 +82,9 @@
 ;; custom-colors
 (require 'cus-colors)
 
+;; start the server!
+(server-start)
+
 ;;; provide this package.
 (message "Loading dot-emacs...done")
 (provide 'dot-emacs)

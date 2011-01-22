@@ -11,3 +11,5 @@ alias agi='sudo apt-get install'
 alias acs='sudo apt-cache search'
 alias agr='sudo apt-get remove'
 
+# emacsclient!
+alias ec='emacsclient -n'

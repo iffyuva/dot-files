@@ -45,3 +45,6 @@ fi
 if [ -e "$MYDOTFILES/bash.d/alias" ]; then
    source "$MYDOTFILES/bash.d/alias"
 fi
+
+# rvm string.
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
