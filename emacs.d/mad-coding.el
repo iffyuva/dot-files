@@ -21,6 +21,10 @@
 ;; add latest ruby-mode
 (add-to-list 'load-path (concat top-dir "/ruby-mode"))
 (require 'ruby-mode)
+(add-hook 'ruby-mode-hook
+          (lambda ()
+            (require 'ruby-electric)
+            (ruby-electric-mode t)))
 
 ;; add yasnippets.
 (add-to-list 'load-path (concat top-dir "/yasnippet"))
