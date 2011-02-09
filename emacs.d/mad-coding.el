@@ -47,7 +47,7 @@
             (ruby-electric-mode t)))
 
 (add-to-list 'auto-mode-alist
-             '("\\(\\.\\(rb\\|rake\\|gemspec\\)\\|Rakefile\\)$" . ruby-mode))
+             '("\\(\\.\\(rb\\|rake\\|gemspec\\)\\|Rakefile\\|Gemfile\\)$" . ruby-mode))
 
 
 ;; add haml and sass modes
@@ -61,6 +61,8 @@
 ;; add javascript2 mode
 (add-to-list 'load-path (concat top-dir "/js2-mode"))
 (autoload 'js2-mode "js2-mode" nil t)
+(setq js2-auto-indent-p t)
+(setq js2-use-ast-for-indentation-p t)
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 
 
