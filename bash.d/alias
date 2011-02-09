@@ -13,3 +13,7 @@ alias agr='sudo apt-get remove'
 
 # emacsclient!
 alias ec='emacsclient -n'
+
+# rails stuff
+alias be="bundle exec"
+alias bec="bundle exec cucumber"
