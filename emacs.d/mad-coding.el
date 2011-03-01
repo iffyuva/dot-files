@@ -10,16 +10,16 @@
 
 
 ;; add yasnippets.
-(add-to-list 'load-path (concat top-dir "/yasnippet"))
+(add-to-list 'load-path (concat top-dir "/vendor/yasnippet"))
 (require 'yasnippet)
 (yas/initialize)
-(setq yas/snippet-dirs (concat top-dir "/yasnippet/snippets"))
+(setq yas/snippet-dirs (concat top-dir "/vendor/yasnippet/snippets"))
 (yas/load-directory yas/snippet-dirs)
 
 ;; add auto-completions everywhere.
-(add-to-list 'load-path (concat top-dir "/auto-complete"))
+(add-to-list 'load-path (concat top-dir "/vendor/auto-complete"))
 (require 'auto-complete)
-(add-to-list 'ac-dictionary-directories (concat top-dir "/auto-complete/dict"))
+(add-to-list 'ac-dictionary-directories (concat top-dir "/vendor/auto-complete/dict"))
 (require 'auto-complete-config)
 (ac-config-default)
 
@@ -39,7 +39,7 @@
 
 
 ;; add latest ruby-mode
-(add-to-list 'load-path (concat top-dir "/ruby-mode"))
+(add-to-list 'load-path (concat top-dir "/vendor/ruby-mode"))
 (require 'ruby-mode)
 (add-hook 'ruby-mode-hook
           (lambda ()
@@ -51,15 +51,15 @@
 
 
 ;; add haml and sass modes
-(add-to-list 'load-path (concat top-dir "/haml-mode"))
-(add-to-list 'load-path (concat top-dir "/sass-mode"))
+(add-to-list 'load-path (concat top-dir "/vendor/haml-mode"))
+(add-to-list 'load-path (concat top-dir "/vendor/sass-mode"))
 (require 'haml-mode)
 (require 'sass-mode)
 (add-to-list 'auto-mode-alist '("\\.haml$" . haml-mode))
 (add-to-list 'auto-mode-alist '("\\.scss$" . sass-mode))
 
 ;; add javascript2 mode
-(add-to-list 'load-path (concat top-dir "/js2-mode"))
+(add-to-list 'load-path (concat top-dir "/vendor/js2-mode"))
 (autoload 'js2-mode "js2-mode" nil t)
 (setq js2-auto-indent-p t)
 (setq js2-use-ast-for-indentation-p t)
@@ -67,25 +67,25 @@
 
 
 ;; add yaml mode
-(add-to-list 'load-path (concat top-dir "/yaml-mode"))
+(add-to-list 'load-path (concat top-dir "/vendor/yaml-mode"))
 (require 'yaml-mode)
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
 
 
 ;; add cucumber-mode
-(add-to-list 'load-path (concat top-dir "/cucumber-mode"))
+(add-to-list 'load-path (concat top-dir "/vendor/cucumber-mode"))
 (require 'feature-mode)
-(yas/load-directory (concat top-dir "/cucumber-mode/snippets"))
+(yas/load-directory (concat top-dir "/vendor/cucumber-mode/snippets"))
 (add-to-list 'auto-mode-alist '("\\.feature$" . feature-mode))
 
 
 ;; setup rinari
-(add-to-list 'load-path (concat top-dir "/rinari"))
+(add-to-list 'load-path (concat top-dir "/vendor/rinari"))
 (require 'rinari)
 
 
 ;; add rhtml mode {checking this stuff}
-(add-to-list 'load-path (concat top-dir "/rhtml-mode"))
+(add-to-list 'load-path (concat top-dir "/vendor/rhtml-mode"))
 (require 'rhtml-mode)
 (add-hook 'rhtml-mode-hook
           (lambda () (rinari-launch)))

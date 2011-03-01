@@ -14,7 +14,7 @@
 
 ;; org-mode
 (setq load-path
-      (cons (concat top-dir "/org-mode/lisp") load-path))
+      (cons (concat top-dir "/vendor/org-mode/lisp") load-path))
 (require 'org)
 (require 'org-install)
 

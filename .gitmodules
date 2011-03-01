@@ -1,33 +1,33 @@
-[submodule "emacs.d/org-mode"]
-	path = emacs.d/org-mode
+[submodule "emacs.d/vendor/org-mode"]
+	path = emacs.d/vendor/org-mode
 	url = git://repo.or.cz/org-mode.git
-[submodule "emacs.d/yasnippet"]
-	path = emacs.d/yasnippet
+[submodule "emacs.d/vendor/yasnippet"]
+	path = emacs.d/vendor/yasnippet
 	url = git://github.com/emacsmirror/yasnippet.git
-[submodule "emacs.d/auto-complete"]
-	path = emacs.d/auto-complete
+[submodule "emacs.d/vendor/auto-complete"]
+	path = emacs.d/vendor/auto-complete
 	url = http://cx4a.org/repo/auto-complete.git
-[submodule "emacs.d/ruby-mode"]
-	path = emacs.d/ruby-mode
+[submodule "emacs.d/vendor/ruby-mode"]
+	path = emacs.d/vendor/ruby-mode
 	url = git://github.com/gnuyuva/ruby-mode.git
-[submodule "emacs.d/rinari"]
-	path = emacs.d/rinari
+[submodule "emacs.d/vendor/rinari"]
+	path = emacs.d/vendor/rinari
 	url = git://github.com/eschulte/rinari.git
-[submodule "emacs.d/yaml-mode"]
-	path = emacs.d/yaml-mode
+[submodule "emacs.d/vendor/yaml-mode"]
+	path = emacs.d/vendor/yaml-mode
 	url = git://github.com/yoshiki/yaml-mode.git
-[submodule "emacs.d/js2-mode"]
-	path = emacs.d/js2-mode
+[submodule "emacs.d/vendor/js2-mode"]
+	path = emacs.d/vendor/js2-mode
 	url = git://github.com/mooz/js2-mode.git
-[submodule "emacs.d/rhtml-mode"]
-	path = emacs.d/rhtml-mode
+[submodule "emacs.d/vendor/rhtml-mode"]
+	path = emacs.d/vendor/rhtml-mode
 	url = git://github.com/eschulte/rhtml.git
-[submodule "emacs.d/haml-mode"]
-	path = emacs.d/haml-mode
+[submodule "emacs.d/vendor/haml-mode"]
+	path = emacs.d/vendor/haml-mode
 	url = git://github.com/nex3/haml-mode.git
-[submodule "emacs.d/sass-mode"]
-	path = emacs.d/sass-mode
+[submodule "emacs.d/vendor/sass-mode"]
+	path = emacs.d/vendor/sass-mode
 	url = git://github.com/nex3/sass-mode.git
-[submodule "emacs.d/cucumber-mode"]
-	path = emacs.d/cucumber-mode
+[submodule "emacs.d/vendor/cucumber-mode"]
+	path = emacs.d/vendor/cucumber-mode
 	url = git://github.com/michaelklishin/cucumber.el.git
