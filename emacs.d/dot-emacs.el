@@ -61,6 +61,22 @@
 (setq comint-completion-addsuffix t)
 (setq comint-eol-on-send t)
 
+;; yes and no are too long to type!
+(defalias 'yes-or-no-p 'y-or-n-p)
+
+;; uniquify buffer names
+;; http://trey-jackson.blogspot.com/2008/01/emacs-tip-11-uniquify.html
+(require 'uniquify)
+(setq uniquify-buffer-name-style 'reverse)
+(setq uniquify-separator ":")
+(setq uniquify-after-kill-buffer-p t)
+(setq uniquify-ignore-buffers-re "^\\*")
+
+
+;; lets stop adding trailing whitespaces
+(setq-default show-trailing-whitespace t)
+
+
 ;; coding customizations
 (require 'mad-coding)
 
