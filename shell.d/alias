@@ -18,12 +18,14 @@ alias ec='emacsclient -n'
 alias gst='git status'
 alias gp='git push'
 alias gd='git diff'
+alias gdc='git diff --cached'
 alias gca='git commit -v -a'
 alias gb='git branch'
 alias gba='git branch -a'
 alias gcp='git cherry-pick'
 alias grst='git reset --hard HEAD'
-alias gf="git fetch"
+alias gf='git fetch'
+alias gk='gitk --all'
 
 # some other aliases
 alias psr="ps axu|grep ruby"
