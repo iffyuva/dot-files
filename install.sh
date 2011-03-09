@@ -2,7 +2,7 @@
 #
 # installs all the files to $HOME directory.
 
-FILES="bash_profile bashrc dircolors emacs \
+FILES="bash_profile bashrc zshrc dircolors emacs \
 gitconfig gnus"
 
 # just create links in home directory!

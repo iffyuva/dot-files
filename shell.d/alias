@@ -1,0 +1,36 @@
+#!/bin/sh
+#
+# aliases, by default.
+
+# enable colors for ls and dir
+alias ls='ls --color=always'
+alias dir='dir --color=auto'
+
+# *ubuntu shortcuts
+alias agi='sudo apt-get install'
+alias acs='sudo apt-cache search'
+alias agr='sudo apt-get remove'
+
+# emacsclient!
+alias ec='emacsclient -n'
+
+# git aliases
+alias gst='git status'
+alias gp='git push'
+alias gd='git diff'
+alias gca='git commit -v -a'
+alias gb='git branch'
+alias gba='git branch -a'
+alias gcp='git cherry-pick'
+alias grst='git reset --hard HEAD'
+alias gf="git fetch"
+
+# some other aliases
+alias psr="ps axu|grep ruby"
+alias screen="screen -h 5000"
+
+# rails stuff
+alias r="rake"
+alias rss="ruby ./script/console"
+alias be="bundle exec"
+alias bec="bundle exec cucumber"
