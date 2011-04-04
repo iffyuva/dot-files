@@ -1,5 +1,5 @@
 ;;; coding.el --- Yuva's emacs settings and configurations
-;; 
+;;
 ;; my coding related stuff!
 
 
@@ -57,13 +57,16 @@
 (require 'sass-mode)
 (add-to-list 'auto-mode-alist '("\\.haml$" . haml-mode))
 (add-to-list 'auto-mode-alist '("\\.scss$" . sass-mode))
+(add-to-list 'ac-modes 'haml-mode)
+(add-to-list 'ac-modes 'sass-mode)
 
 ;; add javascript2 mode
 (add-to-list 'load-path (concat top-dir "/vendor/js2-mode"))
 (autoload 'js2-mode "js2-mode" nil t)
 (setq js2-auto-indent-p t)
 (setq js2-use-ast-for-indentation-p t)
-(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
+(add-to-list 'auto-mode-alist '("\\.\\(js\\|js\\.erb\\)$" . js2-mode))
+(add-to-list 'ac-modes 'js2-mode)
 
 
 ;; add yaml mode
@@ -82,6 +85,7 @@
 ;; setup rinari
 (add-to-list 'load-path (concat top-dir "/vendor/rinari"))
 (require 'rinari)
+(setq rinari-tags-file-name "TAGS")
 
 
 ;; add rhtml mode {checking this stuff}
@@ -89,5 +93,32 @@
 (require 'rhtml-mode)
 (add-hook 'rhtml-mode-hook
           (lambda () (rinari-launch)))
+
+
+;; try cedet, um my 2nd attempt
+(add-to-list 'load-path (concat top-dir "/cedet"))
+(add-to-list 'load-path (concat top-dir "/cedet/common"))
+(add-to-list 'load-path (concat top-dir "/cedet/eieio"))
+(add-to-list 'load-path (concat top-dir "/cedet/ede"))
+(add-to-list 'load-path (concat top-dir "/cedet/semantic"))
+(add-to-list 'load-path (concat top-dir "/cedet/semantic/wisent"))
+(add-to-list 'load-path (concat top-dir "/cedet/semantic/bovine"))
+(add-to-list 'load-path (concat top-dir "/cedet/srecode"))
+;; (require 'eieio)
+;; (require 'ede)
+;; (require 'semantic)
+;; (require 'srecode)
+
+(load-file (concat top-dir "/cedet/common/cedet.el"))
+(global-ede-mode t)
+;; (semantic-load-enable-code-helpers)
+(semantic-load-enable-excessive-code-helpers)
+(semantic-load-enable-all-exuberent-ctags-support)
+(semantic-load-enable-primary-exuberent-ctags-support)
+(global-srecode-minor-mode 1)
+
+(require 'semanticdb)
+(global-semanticdb-minor-mode 1)
+(semanticdb-enable-cscope-databases)
 
 (provide 'mad-coding)

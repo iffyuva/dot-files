@@ -1,9 +1,9 @@
 ;;; dot-emacs.el --- Yuva's emacs settings and configurations
-;; 
+;;
 ;; Well, edit this file for all the needs.
 ;; Before loading this file, one has to set top-dir
 ;; variable to the root directory of the dot-emacs folder.
-;; 
+;;
 ;; ;; dot-emacs
 ;; (setq top-dir (expand-file-name "dot-emacs" "~"))
 ;; (setq load-path (cons top-dir load-path))
@@ -39,7 +39,7 @@
 (menu-bar-mode -1)
 (transient-mark-mode t)
 (setq-default indent-tabs-mode nil)
-(setq truncate-partial-width-windows t)
+(setq truncate-partial-width-windows nil)
 
 
 ;; Enable display date and time option.
@@ -51,6 +51,7 @@
 ;; interactively do things!
 (require 'ido)
 (ido-mode t)
+(setq ido-enable-flex-matching t)
 
 ;; stop creating those backup files!
 (setq make-backup-files nil)
@@ -71,6 +72,17 @@
 (setq uniquify-separator ":")
 (setq uniquify-after-kill-buffer-p t)
 (setq uniquify-ignore-buffers-re "^\\*")
+
+
+;; windmove and bookmark from hemant!
+(windmove-default-keybindings)
+
+(setq load-path
+      (cons (concat top-dir "/vendor") load-path))
+(require 'bookmark)
+(global-set-key "\C-xm" 'bm-toggle)
+(global-set-key "\C-xn" 'bm-next)
+(global-set-key "\C-xp" 'bm-previous)
 
 
 ;; lets stop adding trailing whitespaces
