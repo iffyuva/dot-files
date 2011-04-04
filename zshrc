@@ -133,6 +133,7 @@ for d in $(ls $MYOPT); do
    fi
 done
 export JAVA_HOME=/usr/local/jdk
+export PATH=$JAVA_HOME/bin:$PATH
 
 # custom colors
 # hate bold characters in ls or dir.
