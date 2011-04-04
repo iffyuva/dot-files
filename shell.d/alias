@@ -19,20 +19,23 @@ alias gst='git status'
 alias gp='git push'
 alias gd='git diff'
 alias gdc='git diff --cached'
+alias gcm='git commit -m'
 alias gca='git commit -v -a'
 alias gb='git branch'
 alias gba='git branch -a'
+alias gco='git checkout'
 alias gcp='git cherry-pick'
 alias grst='git reset --hard HEAD'
 alias gf='git fetch'
 alias gk='gitk --all'
 
 # some other aliases
-alias psr="ps axu|grep ruby"
-alias screen="screen -h 5000"
+alias psr='ps axu | grep ruby'
+alias screen='screen -h 5000'
 
 # rails stuff
-alias r="rake"
-alias rss="ruby ./script/console"
-alias be="bundle exec"
-alias bec="bundle exec cucumber"
+alias r='rake'
+alias be='bundle exec'
+alias bec='bundle exec cucumber'
+alias br='bundle exec rails'
+alias rs='bundle exec rails server'
