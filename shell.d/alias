@@ -28,6 +28,8 @@ alias gcp='git cherry-pick'
 alias grst='git reset --hard HEAD'
 alias gf='git fetch'
 alias gk='gitk --all'
+alias t='git status'
+alias a='git add'
 
 # some other aliases
 alias psr='ps axu | grep ruby'
