@@ -3,7 +3,7 @@
 # installs all the files to $HOME directory.
 
 FILES="bash_profile bashrc zshrc dircolors emacs \
-gitconfig gnus"
+gitconfig gnus gemrc"
 
 # just create links in home directory!
 for f in $FILES; do
