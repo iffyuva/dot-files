@@ -43,8 +43,8 @@ if [ -e "$HOME/.dircolors" ]; then
 fi
 
 # finally enable all aliases.
-if [ -e "$MYDOTFILES/bash.d/alias" ]; then
-   source "$MYDOTFILES/bash.d/alias"
+if [ -e "$MYDOTFILES/shell.d/alias" ]; then
+   source "$MYDOTFILES/shell.d/alias"
 fi
 
 # rvm string.

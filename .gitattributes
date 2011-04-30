@@ -5,4 +5,5 @@
 install.sh     -crlf
 bash_profile   -crlf
 bashrc         -crlf
-bash.d/alias   -crlf
+shell.d/alias  -crlf
+zshrc          -crlf
