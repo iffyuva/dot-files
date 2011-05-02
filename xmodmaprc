@@ -1,0 +1,4 @@
+! make caps additional ctrl
+clear Lock
+keycode 0x7e = Control_R
+add Control = Control_R
