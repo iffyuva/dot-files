@@ -12,58 +12,46 @@
 
 ;;; Top level emacs file.
 
+(defun trim-string (str)
+  (replace-regexp-in-string "^[ \t]+" ""
+                            (replace-regexp-in-string "[ \t\n]+$" "" str)))
+
 ;; get info about the system first!
-(setq uname-kernel
-      (replace-regexp-in-string
-       "\n" ""                          ; remove '\n' at end.
-       (shell-command-to-string "uname -s")))
-(setq uname-host
-      (replace-regexp-in-string
-       "\n" ""                          ; remove '\n' at end.
-       (shell-command-to-string "uname -n")))
+(setq uname-kernel (trim-string (shell-command-to-string "uname -s")))
+(setq uname-host   (trim-string (shell-command-to-string "uname -n")))
+(setq is-workplace (or (string-match "pca-yuvak" uname-host) (string-match "eod" uname-host)))
+(setq is-mswindoze (string-match "CYGWIN_NT-5.1" uname-kernel))
 
-
-;; emacs cant be closed accidentally.
-;; syntax-highlighting.
-;; enable column number mode
-;; remove different bars
-;; enable transient mark mode {always}
-;; no tabs, only spaces
-;; truncate lines only in full screen mode
-;;(put 'upcase-region 'disabled nil)
-(setq confirm-kill-emacs 'yes-or-no-p)
-(global-font-lock-mode t)
-(column-number-mode t)
-(tool-bar-mode -1)
-(scroll-bar-mode -1)
-(menu-bar-mode -1)
-(transient-mark-mode t)
-(setq-default indent-tabs-mode nil)
-(setq truncate-partial-width-windows nil)
-
+;; some descent customizations
+(setq confirm-kill-emacs 'yes-or-no-p)  ; emacs cant be closed accidentally.
+(defalias 'yes-or-no-p 'y-or-n-p)       ; alias for yes-or-no
+(global-font-lock-mode t)               ; syntax-highlighting
+(column-number-mode t)                  ; enable column number mode
+(tool-bar-mode -1)                      ; remove different bars
+(scroll-bar-mode -1)                    ; remove different bars
+(menu-bar-mode -1)                      ; remove different bars
+(transient-mark-mode t)                 ; enable transient mark mode {always}
+(setq-default indent-tabs-mode nil)     ; no tabs, only spaces
+(setq-default show-trailing-whitespace t) ; warn trailing whitespaces
+(setq truncate-partial-width-windows nil) ; truncate lines in full screen mode
+(setq make-backup-files nil)            ; stop creating those backup files!
+(setq auto-save-default nil)            ; dont autosave stuff
+(windmove-default-keybindings)          ; windmove from hemant!
 
 ;; Enable display date and time option.
 (setq display-time-day-and-date t
       display-time-24hr-format t)
 (display-time-mode t)
 
-
 ;; interactively do things!
 (require 'ido)
 (ido-mode t)
 (setq ido-enable-flex-matching t)
 
-;; stop creating those backup files!
-(setq make-backup-files nil)
-(setq auto-save-default nil)
-
 ;; comint sub-process interaction.
 (load "comint")
 (setq comint-completion-addsuffix t)
 (setq comint-eol-on-send t)
-
-;; yes and no are too long to type!
-(defalias 'yes-or-no-p 'y-or-n-p)
 
 ;; uniquify buffer names
 ;; http://trey-jackson.blogspot.com/2008/01/emacs-tip-11-uniquify.html
@@ -73,41 +61,19 @@
 (setq uniquify-after-kill-buffer-p t)
 (setq uniquify-ignore-buffers-re "^\\*")
 
-
-;; windmove and bookmark from hemant!
-(windmove-default-keybindings)
-
-(setq load-path
-      (cons (concat top-dir "/vendor") load-path))
+;; bookmarks stuff
+(setq load-path (cons (concat top-dir "/vendor") load-path))
 (require 'bookmark)
 (global-set-key "\C-xm" 'bm-toggle)
 (global-set-key "\C-xn" 'bm-next)
 (global-set-key "\C-xp" 'bm-previous)
 
 
-;; lets stop adding trailing whitespaces
-(setq-default show-trailing-whitespace t)
-
-
-;; coding customizations
+;; start loading customizations one after another!
 (require 'mad-coding)
-
-;; my-org-mode
 (require 'org-config)
-
-;;; Other customizations.
-
-;; load windows related customization!
-(if (string-match "CYGWIN_NT-5.1" uname-kernel)
-    (require 'ms-windows))
-
-;; office relates customizations!
-(if (or (string-match "pca-yuvak" uname-host)
-        (string-match "eod" uname-host))
-    (require 'ten2six))
-
-
-;; custom-colors
+(if is-mswindoze (require 'ms-windows))
+(if is-workplace (require 'ten2six))
 (require 'cus-colors)
 
 ;; start the server!
