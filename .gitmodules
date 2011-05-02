@@ -31,3 +31,6 @@
 [submodule "emacs.d/vendor/cucumber-mode"]
 	path = emacs.d/vendor/cucumber-mode
 	url = git://github.com/michaelklishin/cucumber.el.git
+[submodule "emacs.d/vendor/emms"]
+	path = emacs.d/vendor/emms
+	url = git://git.sv.gnu.org/emms.git

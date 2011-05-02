@@ -21,6 +21,7 @@
 (setq uname-host   (trim-string (shell-command-to-string "uname -n")))
 (setq is-workplace (or (string-match "pca-yuvak" uname-host) (string-match "eod" uname-host)))
 (setq is-mswindoze (string-match "CYGWIN_NT-5.1" uname-kernel))
+(setq is-freebird  (and (not is-workplace) (not is-mswindoze)))
 
 ;; some descent customizations
 (setq confirm-kill-emacs 'yes-or-no-p)  ; emacs cant be closed accidentally.
@@ -74,6 +75,7 @@
 (require 'org-config)
 (if is-mswindoze (require 'ms-windows))
 (if is-workplace (require 'ten2six))
+(if is-freebird  (require 'funky-emms))
 (require 'cus-colors)
 
 ;; start the server!
