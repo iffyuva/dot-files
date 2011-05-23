@@ -34,3 +34,6 @@
 [submodule "emacs.d/vendor/emms"]
 	path = emacs.d/vendor/emms
 	url = git://git.sv.gnu.org/emms.git
+[submodule "emacs.d/vendor/coffee-mode"]
+	path = emacs.d/vendor/coffee-mode
+	url = git://github.com/defunkt/coffee-mode.git

@@ -81,6 +81,10 @@
 (yas/load-directory (concat top-dir "/vendor/cucumber-mode/snippets"))
 (add-to-list 'auto-mode-alist '("\\.feature$" . feature-mode))
 
+;; add coffee-mode
+(add-to-list 'load-path (concat top-dir "/vendor/coffee-mode"))
+(require 'coffee-mode)
+
 
 ;; setup rinari
 (add-to-list 'load-path (concat top-dir "/vendor/rinari"))
@@ -113,8 +117,8 @@
 (global-ede-mode t)
 ;; (semantic-load-enable-code-helpers)
 (semantic-load-enable-excessive-code-helpers)
-(semantic-load-enable-all-exuberent-ctags-support)
-(semantic-load-enable-primary-exuberent-ctags-support)
+;; (semantic-load-enable-all-exuberent-ctags-support)
+;; (semantic-load-enable-primary-exuberent-ctags-support)
 (global-srecode-minor-mode 1)
 
 (require 'semanticdb)
