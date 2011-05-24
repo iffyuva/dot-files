@@ -84,6 +84,16 @@
 ;; add coffee-mode
 (add-to-list 'load-path (concat top-dir "/vendor/coffee-mode"))
 (require 'coffee-mode)
+(add-to-list 'ac-modes 'coffee-mode)
+(add-hook 'coffee-mode-hook
+          '(lambda()
+             (set (make-local-variable 'tab-width) 2)))
+
+;; add mustache mode : for handlebars and stuff
+(add-to-list 'load-path (concat top-dir "/vendor/mustache-mode/contrib"))
+(require 'mustache-mode)
+(add-to-list 'auto-mode-alist '("\\.hs$" . tpl-mode))
+(add-to-list 'ac-modes 'tpl-mode)
 
 
 ;; setup rinari
@@ -99,30 +109,30 @@
           (lambda () (rinari-launch)))
 
 
-;; try cedet, um my 2nd attempt
-(add-to-list 'load-path (concat top-dir "/cedet"))
-(add-to-list 'load-path (concat top-dir "/cedet/common"))
-(add-to-list 'load-path (concat top-dir "/cedet/eieio"))
-(add-to-list 'load-path (concat top-dir "/cedet/ede"))
-(add-to-list 'load-path (concat top-dir "/cedet/semantic"))
-(add-to-list 'load-path (concat top-dir "/cedet/semantic/wisent"))
-(add-to-list 'load-path (concat top-dir "/cedet/semantic/bovine"))
-(add-to-list 'load-path (concat top-dir "/cedet/srecode"))
-;; (require 'eieio)
-;; (require 'ede)
-;; (require 'semantic)
-;; (require 'srecode)
+;; ;; try cedet, um my 2nd attempt
+;; (add-to-list 'load-path (concat top-dir "/cedet"))
+;; (add-to-list 'load-path (concat top-dir "/cedet/common"))
+;; (add-to-list 'load-path (concat top-dir "/cedet/eieio"))
+;; (add-to-list 'load-path (concat top-dir "/cedet/ede"))
+;; (add-to-list 'load-path (concat top-dir "/cedet/semantic"))
+;; (add-to-list 'load-path (concat top-dir "/cedet/semantic/wisent"))
+;; (add-to-list 'load-path (concat top-dir "/cedet/semantic/bovine"))
+;; (add-to-list 'load-path (concat top-dir "/cedet/srecode"))
+;; ;; (require 'eieio)
+;; ;; (require 'ede)
+;; ;; (require 'semantic)
+;; ;; (require 'srecode)
 
-(load-file (concat top-dir "/cedet/common/cedet.el"))
-(global-ede-mode t)
-;; (semantic-load-enable-code-helpers)
-(semantic-load-enable-excessive-code-helpers)
-;; (semantic-load-enable-all-exuberent-ctags-support)
-;; (semantic-load-enable-primary-exuberent-ctags-support)
-(global-srecode-minor-mode 1)
+;; (load-file (concat top-dir "/cedet/common/cedet.el"))
+;; (global-ede-mode t)
+;; ;; (semantic-load-enable-code-helpers)
+;; (semantic-load-enable-excessive-code-helpers)
+;; ;; (semantic-load-enable-all-exuberent-ctags-support)
+;; ;; (semantic-load-enable-primary-exuberent-ctags-support)
+;; (global-srecode-minor-mode 1)
 
-(require 'semanticdb)
-(global-semanticdb-minor-mode 1)
-(semanticdb-enable-cscope-databases)
+;; (require 'semanticdb)
+;; (global-semanticdb-minor-mode 1)
+;; (semanticdb-enable-cscope-databases)
 
 (provide 'mad-coding)
