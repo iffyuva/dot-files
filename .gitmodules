@@ -39,4 +39,4 @@
 	url = git://github.com/defunkt/coffee-mode.git
 [submodule "emacs.d/vendor/mustache-mode"]
 	path = emacs.d/vendor/mustache-mode
-	url = git://github.com/defunkt/mustache.git
+	url = git://github.com/mustache/emacs.git

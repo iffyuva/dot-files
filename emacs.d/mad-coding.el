@@ -90,7 +90,7 @@
              (set (make-local-variable 'tab-width) 2)))
 
 ;; add mustache mode : for handlebars and stuff
-(add-to-list 'load-path (concat top-dir "/vendor/mustache-mode/contrib"))
+(add-to-list 'load-path (concat top-dir "/vendor/mustache-mode"))
 (require 'mustache-mode)
 (add-to-list 'auto-mode-alist '("\\.hs$" . tpl-mode))
 (add-to-list 'ac-modes 'tpl-mode)
