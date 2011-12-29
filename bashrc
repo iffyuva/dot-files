@@ -24,7 +24,7 @@ for d in $(ls $MYOPT); do
       export MANPATH=$MYOPT/$d/share/man:$MANPATH
    fi
 done
-export JAVA_HOME=/usr/local/jdk
+export JAVA_HOME=/usr
 
 # add android paths
 export PATH=$HOME/android-sdk/android/tools:$PATH

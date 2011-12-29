@@ -34,7 +34,7 @@
 (transient-mark-mode t)                 ; enable transient mark mode {always}
 (setq-default indent-tabs-mode nil)     ; no tabs, only spaces
 (setq-default show-trailing-whitespace t) ; warn trailing whitespaces
-(setq truncate-partial-width-windows nil) ; truncate lines in full screen mode
+(setq truncate-partial-width-windows t) ; truncate lines in full screen mode
 (setq make-backup-files nil)            ; stop creating those backup files!
 (setq auto-save-default nil)            ; dont autosave stuff
 (windmove-default-keybindings)          ; windmove from hemant!
@@ -77,6 +77,11 @@
 (if is-workplace (require 'ten2six))
 (if is-freebird  (require 'funky-emms))
 (require 'cus-colors)
+
+;; misc clipboard settings
+(if is-freebird
+    (setq x-select-enable-clipboard t)
+  (setq interprogram-paste-function 'x-cut-buffer-or-selection-value))
 
 ;; start the server!
 (server-start)
