@@ -1,5 +1,7 @@
 # zshrc customizations        -*- shell-script -*-
 
+# detect machine first!
+UNAME_S=`uname -s`
 
 # most of the things are taken from hemant.
 setopt correct
@@ -134,19 +136,21 @@ for d in $(ls $MYOPT); do
 done
 export JAVA_HOME=/usr
 export PATH=$JAVA_HOME/bin:$PATH
+export PATH=/usr/local/bin:$PATH
 
 export EDITOR='emacsclient --no-wait'
+export CC='/usr/bin/gcc-4.2'
 
 # custom colors
 # hate bold characters in ls or dir.
-if [ -e "$HOME/.dircolors" ]; then
-   eval `dircolors -b $HOME/.dircolors`
-fi
+# if [ -e "$HOME/.dircolors" ]; then
+#    eval `dircolors -b $HOME/.dircolors`
+# fi
 
 
 # export where actual dot-files exist
 # this is a dirty-hack at present.
-export MYDOTFILES=`dirname $(ls ~/.zshrc -al | cut -d'>' -f2)`
+export MYDOTFILES=`dirname $(ls -al $HOME/.zshrc | cut -d'>' -f2)`
 
 # finally enable all aliases.
 if [ -e "$MYDOTFILES/shell.d/alias" ]; then

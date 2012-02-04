@@ -3,7 +3,6 @@
 # aliases, by default.
 
 # enable colors for ls and dir
-alias ls='ls --color=always'
 alias dir='dir --color=auto'
 
 # *ubuntu shortcuts
@@ -41,3 +40,11 @@ alias be='bundle exec'
 alias bec='bundle exec cucumber'
 alias br='bundle exec rails'
 alias rs='bundle exec rails server'
+
+# Mac-OS related stuff
+if [[ "$UNAME_S" == "Darwin" ]]; then
+   alias ls='ls -G'
+   alias emacs='open -a Emacs.app'
+else
+   alias ls='ls --color=always'
+fi

@@ -4,7 +4,7 @@
 ;; custom faces
 (custom-set-faces
  '(default ((t (:family "DejaVu Sans Mono" :foundry "outline"
-                        :width normal :height 98 :weight normal
+                        :width normal :height 140 :weight normal
                         :slant normal :underline nil :overline nil
                         :strike-through nil :box nil :inverse-video nil
                         :foreground "white" :background "dark green"
