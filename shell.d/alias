@@ -10,9 +10,6 @@ alias agi='sudo apt-get install'
 alias acs='sudo apt-cache search'
 alias agr='sudo apt-get remove'
 
-# emacsclient!
-alias ec='emacsclient -n'
-
 # git aliases
 alias gst='git status'
 alias gp='git push'
@@ -31,11 +28,10 @@ alias t='git status'
 alias a='git add'
 
 # some other aliases
-alias psr='ps axu | grep ruby'
 alias screen='screen -h 5000'
 
 # rails stuff
-alias r='rake'
+alias r='be rake'
 alias be='bundle exec'
 alias bec='bundle exec cucumber'
 alias br='bundle exec rails'
@@ -45,6 +41,8 @@ alias rs='bundle exec rails server'
 if [[ "$UNAME_S" == "Darwin" ]]; then
    alias ls='ls -G'
    alias emacs='open -a Emacs.app'
+   alias ec='/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -n'
 else
    alias ls='ls --color=always'
+   alias ec='emacsclient -n'
 fi
