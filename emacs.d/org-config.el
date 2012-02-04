@@ -1,9 +1,9 @@
 ;;; org-config.el --- Yuva's org settings and configurations
-;; 
+;;
 ;; Well, edit this file for all the needs.
 ;; Before loading this file, one has to set top-dir variable
 ;; to the root directory of the org folder.
-;; 
+;;
 ;; Note : Most of these ideas are taken from urls
 ;; - http://doc.norang.ca/org-mode.html
 ;; - http://alexicalmistake.com/2008/07/experiments-in-emacs/
@@ -46,9 +46,10 @@
     (progn
       (setq org-agenda-files
             (list
-             (concat top-dir "/org-files/personal.org")
              (concat top-dir "/org-files/capture.org")
-             (concat top-dir "/org-files/ten2six.org")))
+             (concat top-dir "/org-files/finance.org")
+             (concat top-dir "/org-files/itswork.org")
+             (concat top-dir "/org-files/misc-eh.org")))
       (setq org-default-notes-file
             (concat top-dir "/org-files/capture.org")))
   (message "Can't find org-files, just check your system"))

@@ -62,14 +62,6 @@
 (setq uniquify-after-kill-buffer-p t)
 (setq uniquify-ignore-buffers-re "^\\*")
 
-;; bookmarks stuff
-(setq load-path (cons (concat top-dir "/vendor") load-path))
-(require 'bookmark)
-(global-set-key "\C-xm" 'bm-toggle)
-(global-set-key "\C-xn" 'bm-next)
-(global-set-key "\C-xp" 'bm-previous)
-
-
 ;; start loading customizations one after another!
 (require 'mad-coding)
 (require 'org-config)
