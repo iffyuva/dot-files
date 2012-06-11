@@ -9,7 +9,7 @@
 	url = http://cx4a.org/repo/auto-complete.git
 [submodule "emacs.d/vendor/ruby-mode"]
 	path = emacs.d/vendor/ruby-mode
-	url = git://github.com/gnuyuva/ruby-mode.git
+	url = git://github.com/iffyuva/ruby-mode.git
 [submodule "emacs.d/vendor/rinari"]
 	path = emacs.d/vendor/rinari
 	url = git://github.com/eschulte/rinari.git
