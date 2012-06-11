@@ -62,6 +62,10 @@
 (setq uniquify-after-kill-buffer-p t)
 (setq uniquify-ignore-buffers-re "^\\*")
 
+
+;; load elpa packages
+(require 'new-elpa)
+
 ;; start loading customizations one after another!
 (require 'mad-coding)
 (require 'org-config)
