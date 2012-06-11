@@ -13,18 +13,30 @@
 
 
 ;; set of required packages
-(setq required-packages '(org emms
-                          auto-complete
-                          yasnippet
-                          coffee-mode
-                          yaml-mode
-                          haml-mode
-                          sass-mode
-                          js2-mode))
+(setq y/required-packages '(org emms
+                            auto-complete
+                            yasnippet
+                            coffee-mode
+                            yaml-mode
+                            haml-mode
+                            sass-mode
+                            js2-mode))
 
-(dolist (pkg required-packages)
+(dolist (pkg y/required-packages)
   (unless (package-installed-p pkg)
     (package-install pkg)))
+
+
+(defun y/substr (str1 str2)
+  (if (>= (length str2) (length str1))
+      (string-equal str1 (substring str2 0 (length str1)))))
+
+;; helper to return the path of installed package
+(defun y/package-path (package)
+  (if (package-installed-p package)
+      (dolist (dir (directory-files package-user-dir))
+        (if (y/substr (symbol-name package) dir)
+            (return (concat package-user-dir "/" dir))))))
 
 
 (provide 'new-elpa)

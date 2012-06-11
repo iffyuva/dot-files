@@ -12,12 +12,13 @@
 ;; add yasnippets.
 (require 'yasnippet)
 (yas/initialize)
-(setq yas/snippet-dirs (concat top-dir "/vendor/yasnippet/snippets"))
+(setq yas/snippet-dirs (concat (y/package-path 'yasnippet) "/snippets"))
 (yas/load-directory yas/snippet-dirs)
 
 ;; add auto-completions everywhere.
 (require 'auto-complete)
-(add-to-list 'ac-dictionary-directories (concat top-dir "/vendor/auto-complete/dict"))
+(add-to-list 'ac-dictionary-directories
+             (concat (y/package-path 'auto-complete) "/dict"))
 (require 'auto-complete-config)
 (ac-config-default)
 
