@@ -59,7 +59,9 @@
 (define-key global-map "\C-cc" 'org-capture)
 (setq org-capture-templates
       '(("t" "todo" entry (file (concat top-dir "/org-files/capture.org"))
-         "* TODO %?\n  %U \n  %a")))
+         "* TODO %?\n  %U\n  %a")
+        ("e" "expenses" entry (file (concat top-dir "/org-files/finance.org"))
+         "* EXPENSES %?\n  %U\n")))
 
 ;; refile captured tasks.
 (setq org-completion-use-ido t)
@@ -83,7 +85,7 @@
 
 ;; agenda, reporting and creating effort sheets
 (setq org-agenda-custom-commands
-      '(("r" "Refile New Notes and Tasks" tags "REFILE"
+      '(("r" "Refile New Notes and Tasks" tags "CAPTURE"
          ((org-agenda-todo-ignore-with-date nil)))))
 (setq org-deadline-warning-days 30)
 (setq org-agenda-clockreport-parameter-plist '(:link nil :maxlevel 3))
