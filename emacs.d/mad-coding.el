@@ -10,14 +10,12 @@
 
 
 ;; add yasnippets.
-(add-to-list 'load-path (concat top-dir "/vendor/yasnippet"))
 (require 'yasnippet)
 (yas/initialize)
 (setq yas/snippet-dirs (concat top-dir "/vendor/yasnippet/snippets"))
 (yas/load-directory yas/snippet-dirs)
 
 ;; add auto-completions everywhere.
-(add-to-list 'load-path (concat top-dir "/vendor/auto-complete"))
 (require 'auto-complete)
 (add-to-list 'ac-dictionary-directories (concat top-dir "/vendor/auto-complete/dict"))
 (require 'auto-complete-config)
@@ -51,8 +49,6 @@
 
 
 ;; add haml and sass modes
-(add-to-list 'load-path (concat top-dir "/vendor/haml-mode"))
-(add-to-list 'load-path (concat top-dir "/vendor/sass-mode"))
 (require 'haml-mode)
 (require 'sass-mode)
 (add-to-list 'auto-mode-alist '("\\.haml$" . haml-mode))
@@ -61,7 +57,6 @@
 (add-to-list 'ac-modes 'sass-mode)
 
 ;; add javascript2 mode
-(add-to-list 'load-path (concat top-dir "/vendor/js2-mode"))
 (autoload 'js2-mode "js2-mode" nil t)
 (setq js2-auto-indent-p t)
 (setq js2-use-ast-for-indentation-p t)
@@ -70,7 +65,6 @@
 
 
 ;; add yaml mode
-(add-to-list 'load-path (concat top-dir "/vendor/yaml-mode"))
 (require 'yaml-mode)
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
 
@@ -81,33 +75,12 @@
 (yas/load-directory (concat top-dir "/vendor/cucumber-mode/snippets"))
 (add-to-list 'auto-mode-alist '("\\.feature$" . feature-mode))
 
-;; add coffee-mode
-(add-to-list 'load-path (concat top-dir "/vendor/coffee-mode"))
+;; ;; add coffee-mode
 (require 'coffee-mode)
 (add-to-list 'ac-modes 'coffee-mode)
 (add-hook 'coffee-mode-hook
           '(lambda()
              (set (make-local-variable 'tab-width) 2)))
-
-;; add mustache mode : for handlebars and stuff
-(add-to-list 'load-path (concat top-dir "/vendor/mustache-mode"))
-(require 'mustache-mode)
-(add-to-list 'auto-mode-alist '("\\.hs$" . tpl-mode))
-(add-to-list 'ac-modes 'tpl-mode)
-
-
-;; setup rinari
-(add-to-list 'load-path (concat top-dir "/vendor/rinari"))
-(require 'rinari)
-(setq rinari-tags-file-name "TAGS")
-
-
-;; add rhtml mode {checking this stuff}
-(add-to-list 'load-path (concat top-dir "/vendor/rhtml-mode"))
-(require 'rhtml-mode)
-(add-hook 'rhtml-mode-hook
-          (lambda () (rinari-launch)))
-
 
 ;; ;; try cedet, um my 2nd attempt
 ;; (add-to-list 'load-path (concat top-dir "/cedet"))
