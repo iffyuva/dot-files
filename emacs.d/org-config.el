@@ -10,7 +10,7 @@
 
 
 ;; aspell {improvement over ispell}
-(setq-default ispell-program-name "aspell.exe")
+(setq-default ispell-program-name "aspell")
 
 ;; org-mode
 (setq load-path
