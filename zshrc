@@ -120,20 +120,23 @@ fi
 # nice trick from github
 # parse /opt and update PATH, MANPATH
 MYOPT=$HOME/opt
-for d in $(ls $MYOPT); do
-   # update PATH with bin, sbin.
-   if [ -d "$MYOPT/$d/bin" ]; then
-      export PATH=$MYOPT/$d/bin:$PATH
-   fi
-   if [ -d "$MYOPT/$d/sbin" ]; then
-      export PATH=$MYOPT/$d/sbin:$PATH
-   fi
+if [ -d $MYOPT ]; then
+   for d in $(ls $MYOPT); do
+       # update PATH with bin, sbin.
+      if [ -d "$MYOPT/$d/bin" ]; then
+         export PATH=$MYOPT/$d/bin:$PATH
+      fi
+      if [ -d "$MYOPT/$d/sbin" ]; then
+         export PATH=$MYOPT/$d/sbin:$PATH
+      fi
 
-   # update MANPATH with share/man.
-   if [ -d "$MYOPT/$d/share/man" ]; then
-      export MANPATH=$MYOPT/$d/share/man:$MANPATH
-   fi
-done
+       # update MANPATH with share/man.
+      if [ -d "$MYOPT/$d/share/man" ]; then
+         export MANPATH=$MYOPT/$d/share/man:$MANPATH
+      fi
+   done
+fi
+
 export JAVA_HOME=/usr
 export PATH=$JAVA_HOME/bin:$PATH
 export PATH=/usr/local/bin:$PATH
