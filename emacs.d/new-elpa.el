@@ -27,6 +27,34 @@
     (package-install pkg)))
 
 
+;; el-get - very useful!
+(add-to-list 'load-path "~/.emacs.d/el-get/el-get")
+
+(unless (require 'el-get nil t)
+  (url-retrieve
+   "https://raw.github.com/dimitri/el-get/master/el-get-install.el"
+   (lambda (s)
+     (goto-char (point-max))
+     (eval-print-last-sexp))))
+
+;; add custom packages using el-get
+(setq el-get-sources
+      '((:name emacs-slim
+               :type git
+               :url "git://github.com/minad/emacs-slim.git"
+               :description "major mode for slim"
+               :website "https://github.com/dimitri/el-get"
+               :features cssh)))
+
+(setq y/el-get-packages
+      (append '(cssh el-get)
+       (mapcar 'el-get-source-name el-get-sources)))
+
+(el-get 'sync y/el-get-packages)
+
+
+
+;;; Helper Functions
 (defun y/substr (str1 str2)
   (if (>= (length str2) (length str1))
       (string-equal str1 (substring str2 0 (length str1)))))
@@ -38,15 +66,5 @@
         (if (y/substr (symbol-name package) dir)
             (return (concat package-user-dir "/" dir))))))
 
-
-;; el-get - very useful!
-(add-to-list 'load-path "~/.emacs.d/el-get/el-get")
-
-(unless (require 'el-get nil t)
-  (url-retrieve
-   "https://raw.github.com/dimitri/el-get/master/el-get-install.el"
-   (lambda (s)
-     (goto-char (point-max))
-     (eval-print-last-sexp))))
 
 (provide 'new-elpa)
