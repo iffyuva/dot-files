@@ -28,7 +28,8 @@
 
 
 ;; el-get - very useful!
-(add-to-list 'load-path "~/.emacs.d/el-get/el-get")
+(setq el-get-packages-dir "~/.emacs.d/el-get")
+(add-to-list 'load-path (concat el-get-packages-dir "/el-get"))
 
 (unless (require 'el-get nil t)
   (url-retrieve
@@ -51,7 +52,6 @@
        (mapcar 'el-get-source-name el-get-sources)))
 
 (el-get 'sync y/el-get-packages)
-
 
 
 ;;; Helper Functions

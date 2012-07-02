@@ -76,12 +76,18 @@
 (yas/load-directory (concat top-dir "/vendor/cucumber-mode/snippets"))
 (add-to-list 'auto-mode-alist '("\\.feature$" . feature-mode))
 
-;; ;; add coffee-mode
+;; add coffee-mode
 (require 'coffee-mode)
 (add-to-list 'ac-modes 'coffee-mode)
 (add-hook 'coffee-mode-hook
           '(lambda()
              (set (make-local-variable 'tab-width) 2)))
+
+;; add slim-mode
+(add-to-list 'load-path (concat el-get-packages-dir "/emacs-slim"))
+(require 'slim-mode)
+(add-to-list 'ac-modes 'slim-mode)
+(add-to-list 'auto-mode-alist '("\\.slim$" . slim-mode))
 
 ;; ;; try cedet, um my 2nd attempt
 ;; (add-to-list 'load-path (concat top-dir "/cedet"))
