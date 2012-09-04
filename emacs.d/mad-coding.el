@@ -89,6 +89,11 @@
 (add-to-list 'ac-modes 'slim-mode)
 (add-to-list 'auto-mode-alist '("\\.slim$" . slim-mode))
 
+;; add less-css-mode
+(require 'less-css-mode)
+(add-to-list 'ac-modes 'less-css-mode)
+(add-to-list 'auto-mode-alist '("\\.less$" . less-css-mode))
+
 ;; ;; try cedet, um my 2nd attempt
 ;; (add-to-list 'load-path (concat top-dir "/cedet"))
 ;; (add-to-list 'load-path (concat top-dir "/cedet/common"))

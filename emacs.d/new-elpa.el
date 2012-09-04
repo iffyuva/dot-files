@@ -20,7 +20,8 @@
                             yaml-mode
                             haml-mode
                             sass-mode
-                            js2-mode))
+                            js2-mode
+                            less-css-mode))
 
 (dolist (pkg y/required-packages)
   (unless (package-installed-p pkg)
