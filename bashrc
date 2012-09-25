@@ -38,6 +38,8 @@ export PATH=$JAVA_HOME/bin:$PATH:$EC2_HOME/bin
 export EC2_PRIVATE_KEY=`ls $EC2_HOME/pk-*.pem`
 export EC2_CERT=`ls $EC2_HOME/cert-*.pem`
 
+export CC=/usr/local/bin/gcc-4.2
+
 
 # hate bold characters in ls or dir.
 if [ -e "$HOME/.dircolors" ]; then
