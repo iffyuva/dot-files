@@ -59,6 +59,7 @@
 
 ;; add javascript2 mode
 (autoload 'js2-mode "js2-mode" nil t)
+(setq js2-basic-offset 2)
 (setq js2-auto-indent-p t)
 (setq js2-use-ast-for-indentation-p t)
 (add-to-list 'auto-mode-alist '("\\.\\(js\\|js\\.erb\\)$" . js2-mode))
@@ -93,6 +94,12 @@
 (require 'less-css-mode)
 (add-to-list 'ac-modes 'less-css-mode)
 (add-to-list 'auto-mode-alist '("\\.less$" . less-css-mode))
+
+;; add less-css-mode
+(require 'markdown-mode)
+(add-to-list 'ac-modes 'markdown-mode)
+(add-to-list 'auto-mode-alist '("\\.md$" . markdown-mode))
+
 
 ;; ;; try cedet, um my 2nd attempt
 ;; (add-to-list 'load-path (concat top-dir "/cedet"))
