@@ -142,7 +142,6 @@ export PATH=$JAVA_HOME/bin:$PATH
 export PATH=/usr/local/bin:$PATH
 
 export EDITOR='emacsclient --no-wait'
-export CC=/usr/local/bin/gcc-4.2
 
 # custom colors
 # hate bold characters in ls or dir.
