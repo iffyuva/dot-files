@@ -48,6 +48,8 @@
 (add-to-list 'auto-mode-alist
              '("\\(\\.\\(rb\\|rake\\|gemspec\\)\\|Rakefile\\|Gemfile\\)$" . ruby-mode))
 
+;; add rspec mode
+(require 'compile-rspec)
 
 ;; add haml and sass modes
 (require 'haml-mode)

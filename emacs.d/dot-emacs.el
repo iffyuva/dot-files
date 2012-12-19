@@ -62,6 +62,8 @@
 (setq uniquify-after-kill-buffer-p t)
 (setq uniquify-ignore-buffers-re "^\\*")
 
+;; ansi color for compilation mode
+(require 'ansi-color)
 
 ;; load elpa packages
 (require 'new-elpa)

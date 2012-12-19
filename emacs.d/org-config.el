@@ -16,7 +16,6 @@
 (setq load-path
       (cons (concat top-dir "/vendor/org-mode/lisp") load-path))
 (require 'org)
-(require 'org-install)
 
 (add-to-list 'auto-mode-alist
              '("\\.\\(org\\|org-archive\\)$" . org-mode))
