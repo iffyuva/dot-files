@@ -103,6 +103,9 @@
 (add-to-list 'auto-mode-alist '("\\.md$" . markdown-mode))
 
 
+;; use html mode for jst.ejs
+(add-to-list 'auto-mode-alist '("\\.jst\\." . html-mode))
+
 ;; ;; try cedet, um my 2nd attempt
 ;; (add-to-list 'load-path (concat top-dir "/cedet"))
 ;; (add-to-list 'load-path (concat top-dir "/cedet/common"))
