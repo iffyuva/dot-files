@@ -85,6 +85,7 @@
 (add-hook 'coffee-mode-hook
           '(lambda()
              (set (make-local-variable 'tab-width) 2)))
+(add-to-list 'auto-mode-alist '("\\.coffee.erb$" . coffee-mode))
 
 ;; add slim-mode
 (add-to-list 'load-path (concat el-get-packages-dir "/emacs-slim"))
