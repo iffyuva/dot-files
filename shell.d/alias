@@ -25,24 +25,24 @@ alias grst='git reset --hard HEAD'
 alias gf='git fetch'
 alias gk='gitk --all'
 alias t='git status'
-alias a='git add'
+alias a='git add --all'
 
 # some other aliases
 alias screen='screen -h 5000'
 
 # rails stuff
-alias r='be rake'
-alias be='bundle exec'
-alias bec='bundle exec cucumber'
-alias br='bundle exec rails'
-alias rs='bundle exec rails server'
+alias rk='time bundle rake'
+alias be='time bundle exec'
+alias bc='time bundle exec cucumber'
+alias br='time bundle exec rails'
+alias rs='time bundle exec rails server'
 
 # Mac-OS related stuff
 if [[ "$UNAME_S" == "Darwin" ]]; then
    alias ls='ls -G'
    alias emacs='open -a Emacs.app'
-   alias ec='/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -n'
 else
    alias ls='ls --color=always'
-   alias ec='emacsclient -n'
 fi
+alias ec='emacsclient -n'
+
