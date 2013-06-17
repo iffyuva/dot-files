@@ -159,6 +159,9 @@ if [ -e "$MYDOTFILES/shell.d/alias" ]; then
    source "$MYDOTFILES/shell.d/alias"
 fi
 
+# add texbin to $PATH
+PATH=$PATH:/usr/texbin
+
 # rvm stuff.
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
