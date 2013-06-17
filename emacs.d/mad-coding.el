@@ -11,7 +11,6 @@
 
 ;; add yasnippets.
 (require 'yasnippet)
-(yas/initialize)
 (setq yas/snippet-dirs (concat (y/package-path 'yasnippet) "/snippets"))
 (yas/load-directory yas/snippet-dirs)
 
@@ -72,12 +71,6 @@
 (require 'yaml-mode)
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
 
-
-;; add cucumber-mode
-(add-to-list 'load-path (concat top-dir "/vendor/cucumber-mode"))
-(require 'feature-mode)
-(yas/load-directory (concat top-dir "/vendor/cucumber-mode/snippets"))
-(add-to-list 'auto-mode-alist '("\\.feature$" . feature-mode))
 
 ;; add coffee-mode
 (require 'coffee-mode)
