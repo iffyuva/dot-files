@@ -10,9 +10,9 @@
 
 
 ;; add yasnippets.
-(require 'yasnippet)
-(setq yas/snippet-dirs (concat (y/package-path 'yasnippet) "/snippets"))
-(yas/load-directory yas/snippet-dirs)
+;; (require 'yasnippet)
+;; (setq yas/snippet-dirs (concat (y/package-path 'yasnippet) "/snippets"))
+;; (yas/load-directory yas/snippet-dirs)
 
 ;; add auto-completions everywhere.
 (require 'auto-complete)
@@ -45,7 +45,7 @@
             (ruby-electric-mode t)))
 
 (add-to-list 'auto-mode-alist
-             '("\\(\\.\\(rb\\|rake\\|gemspec\\)\\|Rakefile\\|Gemfile\\)$" . ruby-mode))
+             '("\\(\\.\\(rb\\|rake\\|gemspec\\)\\|Rakefile\\|Gemfile\\|prawn\\)$" . ruby-mode))
 
 ;; add rspec mode
 (require 'compile-rspec)
@@ -75,9 +75,7 @@
 ;; add coffee-mode
 (require 'coffee-mode)
 (add-to-list 'ac-modes 'coffee-mode)
-(add-hook 'coffee-mode-hook
-          '(lambda()
-             (set (make-local-variable 'tab-width) 2)))
+(custom-set-variables '(coffee-tab-width 2))
 (add-to-list 'auto-mode-alist '("\\.coffee.erb$" . coffee-mode))
 
 ;; add slim-mode

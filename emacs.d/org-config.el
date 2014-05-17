@@ -46,9 +46,10 @@
       (setq org-agenda-files
             (list
              (concat top-dir "/org-files/capture.org")
+             (concat top-dir "/org-files/opensource.org")
              (concat top-dir "/org-files/finance.org")
-             (concat top-dir "/org-files/itswork.org")
-             (concat top-dir "/org-files/misc-eh.org")))
+             (concat top-dir "/org-files/habits.org" )
+             (concat top-dir "/org-files/finance.org")))
       (setq org-default-notes-file
             (concat top-dir "/org-files/capture.org")))
   (message "Can't find org-files, just check your system"))
@@ -104,6 +105,8 @@
                ("\\paragraph{%s}" . "\\paragraph*{%s}")
                ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
 
+;; add org-habits to org-modules list:
+(add-to-list 'org-modules 'org-habit)
 
 ;; provide org-config
 (provide 'org-config)
