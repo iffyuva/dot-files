@@ -46,10 +46,11 @@
       (setq org-agenda-files
             (list
              (concat top-dir "/org-files/capture.org")
-             (concat top-dir "/org-files/opensource.org")
              (concat top-dir "/org-files/finance.org")
-             (concat top-dir "/org-files/habits.org" )
-             (concat top-dir "/org-files/finance.org")))
+             ;; (concat top-dir "/org-files/opensource.org")
+             (concat top-dir "/org-files/ivrnet.org")
+             (concat top-dir "/org-files/finance.org")
+             (concat top-dir "/org-files/habits.org" )))
       (setq org-default-notes-file
             (concat top-dir "/org-files/capture.org")))
   (message "Can't find org-files, just check your system"))
