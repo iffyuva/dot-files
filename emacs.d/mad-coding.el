@@ -4,7 +4,6 @@
 
 
 ;; Indentation = 3 spaces, i like 3.
-(setq-default tab-width 3)
 (setq-default sh-basic-offset 3)
 (setq-default perl-indent-level 3)
 
@@ -30,7 +29,7 @@
   (c++-mode)
   (setq indent-tabs-mode nil)
   (c-set-style "stroustrup")
-  (setq c-basic-offset 3))
+  (setq c-basic-offset 4))
 
 (add-to-list 'auto-mode-alist
              '("\\.\\(cpp\\|hpp\\|c\\|h\\|inl\\)$" . yk-cpp-mode))
