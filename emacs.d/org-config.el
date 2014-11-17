@@ -95,16 +95,16 @@
 (setq org-archive-location "%s-archive::")
 
 ;; latex customizations.
-(require 'org-latex)
-(add-to-list 'org-export-latex-classes
-             '("orgarticle"
-               "\\documentclass[11pt]{orgarticle}
-               [NO-DEFAULT-PACKAGES]"
-               ("\\section{%s}" . "\\section*{%s}")
-               ("\\subsection{%s}" . "\\subsection*{%s}")
-               ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
-               ("\\paragraph{%s}" . "\\paragraph*{%s}")
-               ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+;; (require 'org-latex)
+;; (add-to-list 'org-export-latex-classes
+;;              '("orgarticle"
+;;                "\\documentclass[11pt]{orgarticle}
+;;                [NO-DEFAULT-PACKAGES]"
+;;                ("\\section{%s}" . "\\section*{%s}")
+;;                ("\\subsection{%s}" . "\\subsection*{%s}")
+;;                ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+;;                ("\\paragraph{%s}" . "\\paragraph*{%s}")
+;;                ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
 
 ;; add org-habits to org-modules list:
 (add-to-list 'org-modules 'org-habit)

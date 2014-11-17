@@ -3,3 +3,4 @@
 (setq top-dir (concat dot-files "/emacs.d"))
 (setq load-path (cons top-dir load-path))
 (require 'dot-emacs)
+(put 'dired-find-alternate-file 'disabled nil)
