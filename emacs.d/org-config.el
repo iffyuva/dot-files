@@ -13,8 +13,6 @@
 (setq-default ispell-program-name "aspell")
 
 ;; org-mode
-(setq load-path
-      (cons (concat top-dir "/vendor/org-mode/lisp") load-path))
 (require 'org)
 
 (add-to-list 'auto-mode-alist
@@ -45,10 +43,8 @@
     (progn
       (setq org-agenda-files
             (list
+             (concat top-dir "/org-files/codemancers.org")
              (concat top-dir "/org-files/capture.org")
-             (concat top-dir "/org-files/finance.org")
-             ;; (concat top-dir "/org-files/opensource.org")
-             (concat top-dir "/org-files/ivrnet.org")
              (concat top-dir "/org-files/finance.org")
              (concat top-dir "/org-files/habits.org" )))
       (setq org-default-notes-file
