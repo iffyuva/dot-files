@@ -84,6 +84,18 @@
 ;; start the server!
 (server-start)
 
+
+;; setup erc, and join emacs channel by default
+(require 'erc)
+(setq erc-track-exclude-types '("JOIN" "NICK" "PART" "QUIT"))
+
+(require 'erc-services)
+(erc-services-mode 1)
+
+(erc :server "irc.freenode.net" :port 6667 :nick "iffyuva")
+(setq erc-autojoin-channels-alist
+      '(("freenode.net" "#emacs")))
+
 ;;; provide this package.
 (message "Loading dot-emacs...done")
 (provide 'dot-emacs)
