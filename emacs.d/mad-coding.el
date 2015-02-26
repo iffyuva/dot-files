@@ -9,9 +9,12 @@
 
 
 ;; add yasnippets.
-;; (require 'yasnippet)
-;; (setq yas/snippet-dirs (concat (y/package-path 'yasnippet) "/snippets"))
-;; (yas/load-directory yas/snippet-dirs)
+(require 'yasnippet)
+(print yas-snippet-dirs)
+(add-to-list 'yas-snippet-dirs (concat (y/package-path 'yasnippet) "/snippets"))
+(if (file-exists-p "~/emacs.d/snippets")
+    (add-to-list 'yas-snippet-dirs "~/emacs.d/snippets"))
+(yas-global-mode 1)
 
 ;; add auto-completions everywhere.
 (require 'auto-complete)
