@@ -94,7 +94,7 @@
 
 (erc :server "irc.freenode.net" :port 6667 :nick "iffyuva")
 (setq erc-autojoin-channels-alist
-      '(("freenode.net" "#emacs")))
+      '(("freenode.net" "#emacs" "#reactjs")))
 
 ;;; provide this package.
 (message "Loading dot-emacs...done")
