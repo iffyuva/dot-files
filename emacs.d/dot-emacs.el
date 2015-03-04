@@ -96,6 +96,11 @@
 (setq erc-autojoin-channels-alist
       '(("freenode.net" "#emacs" "#reactjs")))
 
+(require 'erc-log)
+(setq erc-log-channels-directory "~/.emacs.d/erc/logs/")
+
+(erc-log-enable)
+
 ;;; provide this package.
 (message "Loading dot-emacs...done")
 (provide 'dot-emacs)
