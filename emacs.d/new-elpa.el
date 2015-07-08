@@ -14,7 +14,7 @@
 
 ;; set of required packages
 (setq y/required-packages '(org emms
-                            auto-complete
+                            company
                             yasnippet
                             coffee-mode
                             yaml-mode

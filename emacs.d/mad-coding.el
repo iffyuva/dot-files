@@ -16,12 +16,13 @@
     (add-to-list 'yas-snippet-dirs "~/emacs.d/snippets"))
 (yas-global-mode 1)
 
-;; add auto-completions everywhere.
-(require 'auto-complete)
-(add-to-list 'ac-dictionary-directories
-             (concat (y/package-path 'auto-complete) "/dict"))
-(require 'auto-complete-config)
-(ac-config-default)
+;; add company mode everywhere.
+(require 'company)
+(add-hook 'after-init-hook 'global-company-mode)
+;; (add-to-list 'ac-dictionary-directories
+;;              (concat (y/package-path 'auto-complete) "/dict"))
+;; (require 'auto-complete-config)
+;; (ac-config-default)
 
 
 ;; i love this mode!
@@ -57,8 +58,8 @@
 (require 'sass-mode)
 (add-to-list 'auto-mode-alist '("\\.haml$" . haml-mode))
 (add-to-list 'auto-mode-alist '("\\.scss$" . sass-mode))
-(add-to-list 'ac-modes 'haml-mode)
-(add-to-list 'ac-modes 'sass-mode)
+;; (add-to-list 'ac-modes 'haml-mode)
+;; (add-to-list 'ac-modes 'sass-mode)
 
 ;; add javascript2 mode
 (autoload 'js2-mode "js2-mode" nil t)
@@ -66,7 +67,7 @@
 (setq js2-auto-indent-p t)
 (setq js2-use-ast-for-indentation-p t)
 (add-to-list 'auto-mode-alist '("\\.\\(js\\|js\\.erb\\)$" . js2-mode))
-(add-to-list 'ac-modes 'js2-mode)
+;; (add-to-list 'ac-modes 'js2-mode)
 
 
 ;; add yaml mode
@@ -76,24 +77,24 @@
 
 ;; add coffee-mode
 (require 'coffee-mode)
-(add-to-list 'ac-modes 'coffee-mode)
+;; (add-to-list 'ac-modes 'coffee-mode)
 (custom-set-variables '(coffee-tab-width 2))
 (add-to-list 'auto-mode-alist '("\\.coffee.erb$" . coffee-mode))
 
 ;; add slim-mode
 (add-to-list 'load-path (concat el-get-packages-dir "/emacs-slim"))
 (require 'slim-mode)
-(add-to-list 'ac-modes 'slim-mode)
+;; (add-to-list 'ac-modes 'slim-mode)
 (add-to-list 'auto-mode-alist '("\\.slim$" . slim-mode))
 
 ;; add less-css-mode
 (require 'less-css-mode)
-(add-to-list 'ac-modes 'less-css-mode)
+;; (add-to-list 'ac-modes 'less-css-mode)
 (add-to-list 'auto-mode-alist '("\\.less$" . less-css-mode))
 
 ;; add less-css-mode
 (require 'markdown-mode)
-(add-to-list 'ac-modes 'markdown-mode)
+;; (add-to-list 'ac-modes 'markdown-mode)
 (add-to-list 'auto-mode-alist '("\\.md$" . markdown-mode))
 
 
