@@ -87,7 +87,7 @@
 
 ;; setup erc, and join emacs channel by default
 (require 'erc)
-(setq erc-track-exclude-types '("JOIN" "NICK" "PART" "QUIT"))
+(setq erc-hide-list '("JOIN" "PART" "QUIT"))
 
 (require 'erc-services)
 (erc-services-mode 1)
