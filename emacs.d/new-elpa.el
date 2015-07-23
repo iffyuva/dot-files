@@ -22,7 +22,8 @@
                             sass-mode
                             js2-mode
                             less-css-mode
-                            markdown-mode))
+                            markdown-mode
+                            org-trello))
 
 (dolist (pkg y/required-packages)
   (unless (package-installed-p pkg)

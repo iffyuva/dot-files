@@ -42,11 +42,12 @@
 (if (file-exists-p (concat top-dir "/org-files/capture.org"))
     (progn
       (setq org-agenda-files
-            (list
-             (concat top-dir "/org-files/codemancers.org")
-             (concat top-dir "/org-files/capture.org")
-             (concat top-dir "/org-files/finance.org")
-             (concat top-dir "/org-files/habits.org" )))
+            (append
+             (list (concat top-dir "/org-files/codemancers.org")
+                   (concat top-dir "/org-files/capture.org")
+                   (concat top-dir "/org-files/finance.org")
+                   (concat top-dir "/org-files/habits.org" ))
+             (directory-files (concat top-dir "/org-files/trello") t "org")))
       (setq org-default-notes-file
             (concat top-dir "/org-files/capture.org")))
   (message "Can't find org-files, just check your system"))
@@ -68,13 +69,19 @@
 (setq org-outline-path-complete-in-steps t)
 
 
+;; generic function to move state of a todo from first state to second state
+(defun switch-state-on-clock-in (todo)
+  (if (or (eq todo "TODO") (eq todo "STARTED") (eq todo "DONE"))
+      "STARTED"
+    "in-progress"))
+
 ;; clocking & logging
 (setq org-clock-persist t)
 (org-clock-persistence-insinuate)
 (setq org-clock-into-drawer t)
 (setq org-clock-history-length 35)
 (setq org-clock-in-resume t)
-(setq org-clock-in-switch-to-state "STARTED")
+(setf org-clock-in-switch-to-state 'switch-state-on-clock-in)
 (setq org-clock-out-when-done nil)
 (setq org-log-done '(time))
 (setq org-log-into-drawer t)
@@ -104,6 +111,13 @@
 
 ;; add org-habits to org-modules list:
 (add-to-list 'org-modules 'org-habit)
+
+
+;; third party integrations
+(require 'org-trello)
+(setq org-trello-files
+      (directory-files (concat top-dir "/org-files/trello") t "org"))
+
 
 ;; provide org-config
 (provide 'org-config)
