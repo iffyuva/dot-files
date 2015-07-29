@@ -101,30 +101,5 @@
 ;; use html mode for jst.ejs
 (add-to-list 'auto-mode-alist '("\\.jst\\." . html-mode))
 
-;; ;; try cedet, um my 2nd attempt
-;; (add-to-list 'load-path (concat top-dir "/cedet"))
-;; (add-to-list 'load-path (concat top-dir "/cedet/common"))
-;; (add-to-list 'load-path (concat top-dir "/cedet/eieio"))
-;; (add-to-list 'load-path (concat top-dir "/cedet/ede"))
-;; (add-to-list 'load-path (concat top-dir "/cedet/semantic"))
-;; (add-to-list 'load-path (concat top-dir "/cedet/semantic/wisent"))
-;; (add-to-list 'load-path (concat top-dir "/cedet/semantic/bovine"))
-;; (add-to-list 'load-path (concat top-dir "/cedet/srecode"))
-;; ;; (require 'eieio)
-;; ;; (require 'ede)
-;; ;; (require 'semantic)
-;; ;; (require 'srecode)
-
-;; (load-file (concat top-dir "/cedet/common/cedet.el"))
-;; (global-ede-mode t)
-;; ;; (semantic-load-enable-code-helpers)
-;; (semantic-load-enable-excessive-code-helpers)
-;; ;; (semantic-load-enable-all-exuberent-ctags-support)
-;; ;; (semantic-load-enable-primary-exuberent-ctags-support)
-;; (global-srecode-minor-mode 1)
-
-;; (require 'semanticdb)
-;; (global-semanticdb-minor-mode 1)
-;; (semanticdb-enable-cscope-databases)
 
 (provide 'mad-coding)
