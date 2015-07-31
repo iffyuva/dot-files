@@ -71,7 +71,7 @@
 
 ;; generic function to move state of a todo from first state to second state
 (defun switch-state-on-clock-in (todo)
-  (if (or (eq todo "TODO") (eq todo "STARTED") (eq todo "DONE"))
+  (if (or (string= todo "TODO") (string= todo "STARTED") (string= todo "DONE"))
       "STARTED"
     "in-progress"))
 
