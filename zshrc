@@ -162,12 +162,13 @@ fi
 # add texbin to $PATH
 PATH=$PATH:/usr/texbin
 
+
+# nvm stuff
+# do `nvm alias default iojs` so that nvm has default iojs version
+export NVM_DIR="/Users/yuva/.nvm"
+[[ -s "$NVM_DIR/nvm.sh" ]] && source "$NVM_DIR/nvm.sh"
+
 # rvm stuff.
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
-
-# nvm stuff
-export NVM_DIR="/Users/yuva/.nvm"
-[[ -s "$NVM_DIR/nvm.sh" ]] && source "$NVM_DIR/nvm.sh"
