@@ -26,17 +26,6 @@ if [ -d $MYOPT ]; then
       fi
    done
 fi
-export JAVA_HOME=/usr
-
-# add android paths
-export PATH=$HOME/android-sdk/android/tools:$PATH
-export PATH=$HOME/android-sdk/android/platform-tools:$PATH
-
-# add ec2 related env variables
-export EC2_HOME=$HOME/.ec2
-export PATH=$JAVA_HOME/bin:$PATH:$EC2_HOME/bin
-
-export CC=/usr/local/bin/gcc-4.2
 
 
 # hate bold characters in ls or dir.

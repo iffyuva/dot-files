@@ -137,8 +137,6 @@ if [ -d $MYOPT ]; then
    done
 fi
 
-export JAVA_HOME=/usr
-export PATH=$JAVA_HOME/bin:$PATH
 export PATH=/usr/local/bin:$PATH
 
 export EDITOR='emacsclient'
