@@ -163,6 +163,14 @@ fi
 PATH=$PATH:/usr/texbin
 
 
+# haskell ghc stuff
+export GHC_DOT_APP="/Applications/ghc.app"
+if [ -d "$GHC_DOT_APP" ]; then
+    export PATH="${GHC_DOT_APP}/Contents/bin:${PATH}"
+    export PATH="${HOME}/.local/bin:${HOME}/.cabal/bin:${PATH}"
+fi
+
+
 # nvm stuff
 # do `nvm alias default iojs` so that nvm has default iojs version
 export NVM_DIR="/Users/yuva/.nvm"
