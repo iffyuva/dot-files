@@ -69,9 +69,6 @@
 ;; ansi color for compilation mode
 (require 'ansi-color)
 
-;; load elpa packages
-;; (require 'new-elpa)
-
 ;; start loading customizations one after another!
 (require 'mad-coding)
 (require 'org-config)
