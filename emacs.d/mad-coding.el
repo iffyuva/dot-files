@@ -23,6 +23,13 @@
 (require 'company)
 (add-hook 'after-init-hook 'global-company-mode)
 
+;; add flycheck mode everywhere.
+(require 'flycheck)
+(add-hook 'after-init-hook 'global-flycheck-mode)
+
+;; show tip
+(require 'flycheck-tip)
+(flycheck-tip-use-timer 'verbose)
 
 ;; i love this mode!
 ;; for c and cpp
@@ -48,6 +55,9 @@
 
 (add-to-list 'auto-mode-alist
              '("\\(\\.\\(rb\\|rake\\|gemspec\\)\\|Rakefile\\|Gemfile\\|prawn\\)$" . ruby-mode))
+
+(require 'rubocop)
+(add-hook 'ruby-mode-hook 'rubocop-mode)
 
 ;; add rspec mode
 (require 'compile-rspec)
