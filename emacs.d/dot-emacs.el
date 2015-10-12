@@ -44,6 +44,10 @@
       display-time-24hr-format t)
 (display-time-mode t)
 
+;; set cask for fun.
+(require 'cask "/usr/local/share/emacs/site-lisp/cask/cask.el")
+(cask-initialize top-dir)
+
 ;; interactively do things!
 (require 'ido)
 (ido-mode t)
@@ -66,7 +70,7 @@
 (require 'ansi-color)
 
 ;; load elpa packages
-(require 'new-elpa)
+;; (require 'new-elpa)
 
 ;; start loading customizations one after another!
 (require 'mad-coding)
@@ -86,20 +90,20 @@
 
 
 ;; setup erc, and join emacs channel by default
-(require 'erc)
-(setq erc-hide-list '("JOIN" "PART" "QUIT"))
+;; (require 'erc)
+;; (setq erc-hide-list '("JOIN" "PART" "QUIT"))
 
-(require 'erc-services)
-(erc-services-mode 1)
+;; (require 'erc-services)
+;; (erc-services-mode 1)
 
-(erc :server "irc.freenode.net" :port 6667 :nick "iffyuva")
-(setq erc-autojoin-channels-alist
-      '(("freenode.net" "#emacs" "#reactjs")))
+;; (erc :server "irc.freenode.net" :port 6667 :nick "iffyuva")
+;; (setq erc-autojoin-channels-alist
+;;       '(("freenode.net" "#emacs" "#reactjs")))
 
-(require 'erc-log)
-(setq erc-log-channels-directory "~/.emacs.d/erc/logs/")
+;; (require 'erc-log)
+;; (setq erc-log-channels-directory "~/.emacs.d/erc/logs/")
 
-(erc-log-enable)
+;; (erc-log-enable)
 
 ;;; provide this package.
 (message "Loading dot-emacs...done")
