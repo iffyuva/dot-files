@@ -63,7 +63,7 @@
 (setq js2-basic-offset 2)
 (setq js2-auto-indent-p t)
 (setq js2-use-ast-for-indentation-p t)
-(add-to-list 'auto-mode-alist '("\\.\\(js\\|js\\.erb\\)$" . js2-mode))
+(add-to-list 'auto-mode-alist '("\\.\\(js\\|es6\\|js\\.erb\\)$" . js2-mode))
 
 ;; add yaml mode
 (require 'yaml-mode)
