@@ -38,7 +38,6 @@
 (depends-on "js2-mode")
 (depends-on "less-css-mode")
 (depends-on "markdown-mode")
-(depends-on "org-trello")
 (depends-on "rubocop")
 (depends-on "flycheck-tip")
 (depends-on "haskell-mode")

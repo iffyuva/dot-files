@@ -110,11 +110,5 @@
 (add-to-list 'org-modules 'org-habit)
 
 
-;; third party integrations
-;; (require 'org-trello)
-;; (setq org-trello-files
-;;       (directory-files (concat top-dir "/org-files/trello") t "org$"))
-
-
 ;; provide org-config
 (provide 'org-config)
