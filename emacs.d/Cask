@@ -42,3 +42,4 @@
 (depends-on "rubocop")
 (depends-on "flycheck-tip")
 (depends-on "haskell-mode")
+(depends-on "elm-mode")

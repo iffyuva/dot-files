@@ -37,7 +37,6 @@
 (setq truncate-partial-width-windows t) ; truncate lines in full screen mode
 (setq make-backup-files nil)            ; stop creating those backup files!
 (setq auto-save-default nil)            ; dont autosave stuff
-(windmove-default-keybindings)          ; windmove from hemant!
 
 ;; Enable display date and time option.
 (setq display-time-day-and-date t
