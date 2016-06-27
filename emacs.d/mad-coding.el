@@ -106,9 +106,12 @@
 (add-to-list 'auto-mode-alist '("\\.hs$" . haskell-mode))
 (add-hook 'haskell-mode-hook 'haskell-indentation-mode)
 
-
 ;; add web-mode
 (require 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.jsx$" . web-mode))
+
+;; add elm-mode, automagically adds to mode-list
+(require 'elm-mode)
+
 
 (provide 'mad-coding)
