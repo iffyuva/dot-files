@@ -42,12 +42,9 @@
 (if (file-exists-p (concat top-dir "/org-files/capture.org"))
     (progn
       (setq org-agenda-files
-            (append
-             (list (concat top-dir "/org-files/codemancers.org")
-                   (concat top-dir "/org-files/capture.org")
-                   (concat top-dir "/org-files/finance.org")
-                   (concat top-dir "/org-files/habits.org" ))
-             (directory-files (concat top-dir "/org-files/trello") t "org$")))
+            (list (concat top-dir "/org-files/codemancers.org")
+                  (concat top-dir "/org-files/capture.org")
+                  (concat top-dir "/org-files/habits.org" )))
       (setq org-default-notes-file
             (concat top-dir "/org-files/capture.org")))
   (message "Can't find org-files, just check your system"))
@@ -114,9 +111,9 @@
 
 
 ;; third party integrations
-(require 'org-trello)
-(setq org-trello-files
-      (directory-files (concat top-dir "/org-files/trello") t "org$"))
+;; (require 'org-trello)
+;; (setq org-trello-files
+;;       (directory-files (concat top-dir "/org-files/trello") t "org$"))
 
 
 ;; provide org-config

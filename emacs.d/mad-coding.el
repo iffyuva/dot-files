@@ -6,7 +6,10 @@
 ;; Indentation = 3 spaces, i like 3.
 (setq-default sh-basic-offset 3)
 (setq-default perl-indent-level 3)
+(setq-default js2-basic-offset 2)
 
+;; enable multi cursor mode
+(require 'multiple-cursors)
 
 ;; add yasnippets.
 (require 'yasnippet)
@@ -26,6 +29,7 @@
 ;; add flycheck mode everywhere.
 (require 'flycheck)
 (add-hook 'after-init-hook 'global-flycheck-mode)
+(flycheck-add-mode 'javascript-eslint 'web-mode)
 
 ;; show tip
 (require 'flycheck-tip)
@@ -96,5 +100,15 @@
 ;; use html mode for jst.ejs
 (add-to-list 'auto-mode-alist '("\\.jst\\." . html-mode))
 
+
+;; add haskell-mode
+(require 'haskell-mode)
+(add-to-list 'auto-mode-alist '("\\.hs$" . haskell-mode))
+(add-hook 'haskell-mode-hook 'haskell-indentation-mode)
+
+
+;; add web-mode
+(require 'web-mode)
+(add-to-list 'auto-mode-alist '("\\.jsx$" . web-mode))
 
 (provide 'mad-coding)
