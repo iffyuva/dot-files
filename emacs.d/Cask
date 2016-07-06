@@ -43,3 +43,4 @@
 (depends-on "flycheck-tip")
 (depends-on "haskell-mode")
 (depends-on "elm-mode")
+(depends-on "elixir-mode")
