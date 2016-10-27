@@ -114,6 +114,7 @@
 (require 'elm-mode)
 (add-hook 'elm-mode-hook #'elm-oracle-setup-completion)
 (add-to-list 'company-backends 'company-elm)
+(setq elm-format-on-save t)
 
 ;; add elixir-mode
 (require 'elixir-mode)
