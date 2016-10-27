@@ -32,8 +32,8 @@
 (flycheck-add-mode 'javascript-eslint 'web-mode)
 
 ;; show tip
-(require 'flycheck-tip)
-(flycheck-tip-use-timer 'verbose)
+(with-eval-after-load 'flycheck
+  (flycheck-pos-tip-mode))
 
 ;; i love this mode!
 ;; for c and cpp
