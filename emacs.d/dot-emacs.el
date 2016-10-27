@@ -96,7 +96,7 @@
 
 (erc :server "irc.freenode.net" :port 6667 :nick "iffyuva")
 (setq erc-autojoin-channels-alist
-      '(("freenode.net" "#emacs" "#reactjs")))
+      '(("freenode.net" "#emacs")))
 
 (require 'erc-log)
 (setq erc-log-channels-directory "~/.emacs.d/erc/logs/")
