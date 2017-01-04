@@ -40,11 +40,7 @@ fi
 
 
 # haskell ghc stuff
-export GHC_DOT_APP="/Applications/ghc.app"
-if [ -d "$GHC_DOT_APP" ]; then
-    export PATH="${GHC_DOT_APP}/Contents/bin:${PATH}"
-    export PATH="${HOME}/.local/bin:${HOME}/.cabal/bin:${PATH}"
-fi
+export PATH="${HOME}/.cabal/bin:${PATH}"
 
 
 # nvm stuff
