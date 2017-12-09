@@ -53,10 +53,8 @@
 (require 'org-capture)
 (define-key global-map "\C-cc" 'org-capture)
 (setq org-capture-templates
-      '(("t" "todo" entry (file (concat top-dir "/org-files/capture.org"))
-         "* TODO %?\n  %U\n  %a")
-        ("e" "expenses" entry (file (concat top-dir "/org-files/finance.org"))
-         "* EXPENSES %?\n  %U\n")))
+      `(("t" "todo" entry (file ,(concat top-dir "/org-files/capture.org"))
+         "* TODO %?\n  %U\n  %a")))
 
 ;; refile captured tasks.
 (setq org-completion-use-ido t)
