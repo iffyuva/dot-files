@@ -72,6 +72,10 @@
 (add-to-list 'auto-mode-alist '("\\.haml$" . haml-mode))
 (add-to-list 'auto-mode-alist '("\\.scss$" . sass-mode))
 
+;; add slim mode
+(require 'slim-mode)
+(add-to-list 'auto-mode-alist '("\\.slim$" . slim-mode))
+
 ;; add javascript2 mode
 (autoload 'js2-mode "js2-mode" nil t)
 (setq js2-basic-offset 2)
@@ -109,6 +113,7 @@
 ;; add web-mode
 (require 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.jsx$" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.php$" . web-mode))
 
 ;; add elm-mode, automagically adds to mode-list
 (require 'elm-mode)
@@ -118,5 +123,8 @@
 
 ;; add elixir-mode
 (require 'elixir-mode)
+
+;; add go-mode
+(require 'go-mode)
 
 (provide 'mad-coding)
