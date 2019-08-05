@@ -63,9 +63,6 @@
 (require 'rubocop)
 (add-hook 'ruby-mode-hook 'rubocop-mode)
 
-;; add rspec mode
-(require 'compile-rspec)
-
 ;; add haml and sass modes
 (require 'haml-mode)
 (require 'sass-mode)
