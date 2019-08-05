@@ -3,6 +3,7 @@
 \#*\#
 \#*
 *~
+*.elc
 
 # ignore org-files folder.
 emacs.d/org-files
