@@ -33,6 +33,7 @@
 (package-install 'elm-mode)
 (package-install 'elixir-mode)
 (package-install 'go-mode)
+(package-install 'terraform-mode)
 
 
 (provide 'packages)
