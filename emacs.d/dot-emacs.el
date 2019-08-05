@@ -32,6 +32,9 @@
       display-time-24hr-format t)
 (display-time-mode t)
 
+(require 'packages)
+
+
 ;; interactively do things!
 (require 'ido)
 (ido-mode t)

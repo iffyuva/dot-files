@@ -1,4 +1,4 @@
-;;; coding.el --- Yuva's emacs settings and configurations
+;;; mad-coding.el --- Yuva's emacs settings and configurations
 ;;
 ;; my coding related stuff!
 
@@ -29,7 +29,6 @@
 ;; add flycheck mode everywhere.
 (require 'flycheck)
 (add-hook 'after-init-hook 'global-flycheck-mode)
-(flycheck-add-mode 'javascript-eslint 'web-mode)
 
 ;; show tip
 (with-eval-after-load 'flycheck
@@ -106,11 +105,6 @@
 (require 'haskell-mode)
 (add-to-list 'auto-mode-alist '("\\.hs$" . haskell-mode))
 (add-hook 'haskell-mode-hook 'haskell-indentation-mode)
-
-;; add web-mode
-(require 'web-mode)
-(add-to-list 'auto-mode-alist '("\\.jsx$" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.php$" . web-mode))
 
 ;; add elm-mode, automagically adds to mode-list
 (require 'elm-mode)
