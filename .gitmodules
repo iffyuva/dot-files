@@ -1,6 +1,3 @@
 [submodule "emacs.d/vendor/ruby-mode"]
 	path = emacs.d/vendor/ruby-mode
 	url = git://github.com/iffyuva/ruby-mode.git
-[submodule "emacs.d/vendor/cucumber-mode"]
-	path = emacs.d/vendor/cucumber-mode
-	url = git://github.com/michaelklishin/cucumber.el.git
