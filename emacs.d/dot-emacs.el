@@ -43,12 +43,6 @@
       display-time-24hr-format t)
 (display-time-mode t)
 
-;; set cask for fun.
-(require 'cask "/usr/local/share/emacs/site-lisp/cask/cask.el")
-(cask-initialize top-dir)
-(require 'pallet)
-(pallet-mode t)
-
 ;; interactively do things!
 (require 'ido)
 (ido-mode t)
