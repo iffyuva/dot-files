@@ -17,7 +17,7 @@
  ;; If there is more than one, they won't work right.
  '(coffee-tab-width 2)
  '(package-selected-packages
-   '(terraform-mode less-css-mode haml-mode org yasnippet yaml-mode slim-mode sass-mode rubocop multiple-cursors markdown-mode js2-mode haskell-mode go-mode flycheck-pos-tip emms elm-mode elixir-mode company coffee-mode)))
+   '(helm terraform-mode less-css-mode haml-mode org yasnippet yaml-mode slim-mode sass-mode rubocop multiple-cursors markdown-mode js2-mode haskell-mode go-mode flycheck-pos-tip emms elm-mode elixir-mode company coffee-mode)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

@@ -34,6 +34,7 @@
 (package-install 'elixir-mode)
 (package-install 'go-mode)
 (package-install 'terraform-mode)
+(package-install 'helm)
 
 
 (provide 'packages)

@@ -40,6 +40,14 @@
 (ido-mode t)
 (setq ido-enable-flex-matching t)
 
+;; Load helm all the way on the top
+(require 'helm-config)
+(helm-mode t)
+
+(global-set-key (kbd "M-x") #'helm-M-x)
+(global-set-key (kbd "C-x r b") #'helm-filtered-bookmarks)
+(global-set-key (kbd "C-x C-f") #'helm-find-files)
+
 ;; comint sub-process interaction.
 (load "comint")
 (setq comint-completion-addsuffix t)
