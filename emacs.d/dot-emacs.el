@@ -12,17 +12,6 @@
 
 ;;; Top level emacs file.
 
-(defun trim-string (str)
-  (replace-regexp-in-string "^[ \t]+" ""
-                            (replace-regexp-in-string "[ \t\n]+$" "" str)))
-
-;; get info about the system first!
-(setq uname-kernel (trim-string (shell-command-to-string "uname -s")))
-(setq uname-host   (trim-string (shell-command-to-string "uname -n")))
-(setq is-workplace (or (string-match "pca-yuvak" uname-host) (string-match "eod" uname-host)))
-(setq is-mswindoze (string-match "CYGWIN_NT-5.1" uname-kernel))
-(setq is-freebird  (and (not is-workplace) (not is-mswindoze)))
-
 ;; some descent customizations
 (setq confirm-kill-emacs 'yes-or-no-p)  ; emacs cant be closed accidentally.
 (defalias 'yes-or-no-p 'y-or-n-p)       ; alias for yes-or-no
@@ -67,15 +56,11 @@
 ;; start loading customizations one after another!
 (require 'mad-coding)
 (require 'org-config)
-(if is-mswindoze (require 'ms-windows))
-(if is-workplace (require 'ten2six))
-(if is-freebird  (require 'funky-emms))
+(require 'funky-emms)
 (require 'cus-colors)
 
 ;; misc clipboard settings
-(if is-freebird
-    (setq x-select-enable-clipboard t)
-  (setq interprogram-paste-function 'x-cut-buffer-or-selection-value))
+(setq x-select-enable-clipboard t)
 
 ;; start the server!
 (server-start)
