@@ -43,7 +43,6 @@
       (setq org-agenda-files
             (list (concat top-dir "/org-files/codemancers.org")
                   (concat top-dir "/org-files/capture.org")
-                  (concat top-dir "/org-files/dockup.org")
                   (concat top-dir "/org-files/habits.org" )))
       (setq org-default-notes-file
             (concat top-dir "/org-files/capture.org")))

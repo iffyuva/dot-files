@@ -15,9 +15,10 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(browse-url-browser-function 'browse-url-firefox)
  '(coffee-tab-width 2)
  '(package-selected-packages
-   '(helm terraform-mode less-css-mode haml-mode org yasnippet yaml-mode slim-mode sass-mode rubocop multiple-cursors markdown-mode js2-mode haskell-mode go-mode flycheck-pos-tip emms elm-mode elixir-mode company coffee-mode)))
+   '(lsp-ui lsp-mode exec-path-from-shell flycheck typescript-mode prettier prettier-js helm terraform-mode less-css-mode haml-mode org yaml-mode slim-mode sass-mode rubocop multiple-cursors markdown-mode js2-mode haskell-mode go-mode flycheck-pos-tip elixir-mode company coffee-mode)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

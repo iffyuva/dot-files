@@ -67,7 +67,6 @@
 ;; start loading customizations one after another!
 (require 'mad-coding)
 (require 'org-config)
-(require 'funky-emms)
 (require 'cus-colors)
 
 ;; misc clipboard settings
@@ -76,22 +75,6 @@
 ;; start the server!
 (server-start)
 
-
-;; setup erc, and join emacs channel by default
-(require 'erc)
-(setq erc-hide-list '("JOIN" "PART" "QUIT"))
-
-(require 'erc-services)
-(erc-services-mode 1)
-
-(erc :server "irc.freenode.net" :port 6667 :nick "iffyuva")
-(setq erc-autojoin-channels-alist
-      '(("freenode.net" "#emacs")))
-
-(require 'erc-log)
-(setq erc-log-channels-directory "~/.emacs.d/erc/logs/")
-
-(erc-log-enable)
 
 ;;; provide this package.
 (message "Loading dot-emacs...done")

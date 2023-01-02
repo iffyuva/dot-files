@@ -160,17 +160,17 @@ fi
 # add texbin to $PATH
 PATH=$PATH:/usr/texbin
 
-
-# haskell ghc stuff
-export PATH="${HOME}/.cabal/bin:${PATH}"
-
-
 # nvm stuff
-# do `nvm alias default iojs` so that nvm has default iojs version
-export NVM_DIR="/Users/yuva/.nvm"
-[[ -s "$NVM_DIR/nvm.sh" ]] && source "$NVM_DIR/nvm.sh"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
 
 # rvm stuff.
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+# pnpm
+export PNPM_HOME="/Users/yuva/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
