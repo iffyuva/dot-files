@@ -164,13 +164,12 @@ PATH=$PATH:/usr/texbin
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
+# pnpm
+export PNPM_HOME="/Users/yuva/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
 
 # rvm stuff.
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
-# pnpm
-export PNPM_HOME="/Users/yuva/Library/pnpm"
-export PATH="$PNPM_HOME:$PATH"
-# pnpm end
