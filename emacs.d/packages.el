@@ -6,13 +6,14 @@
 (require 'package)
 
 (add-to-list 'package-archives '("melpa-stable" . "http://stable.melpa.org/packages/"))
-(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
 
 ;; Instead of pinning packages, lets set melpa-stable as highest priority one
 ;; (setq package-pinned-packages '((company . "melpa-stable")))
-(setq package-archive-priorities '(("melpa-stable" . 2) ("melpa" . 1)))
+;; (setq package-archive-priorities '(("melpa-stable" . 2) ("melpa" . 1)))
 
 (package-initialize)
+;; (package-refresh-contents)
 
 (package-install 'org)
 (package-install 'exec-path-from-shell)
@@ -37,6 +38,7 @@
 (package-install 'rjsx-mode)
 (package-install 'prettier)
 (package-install 'typescript-mode)
+(setq package-pinned-packages '((lsp-mode . "melpa")))
 (package-install 'lsp-mode)
 (package-install 'lsp-ui)
 
