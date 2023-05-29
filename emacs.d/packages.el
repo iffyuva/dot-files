@@ -16,6 +16,7 @@
 ;; (package-refresh-contents)
 
 (package-install 'org)
+(package-install 'quelpa)
 (package-install 'exec-path-from-shell)
 (package-install 'multiple-cursors)
 (package-install 'company)
