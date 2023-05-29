@@ -45,14 +45,18 @@
 ;; add latest ruby-mode
 (add-to-list 'load-path (concat top-dir "/vendor/ruby-mode"))
 (require 'ruby-mode)
-(add-hook 'ruby-mode-hook
-          (lambda ()
-            (require 'ruby-electric)
-            (ruby-electric-mode t)))
-(add-hook 'ruby-mode-hook #'lsp)
+;; (add-hook 'ruby-mode-hook
+;;           (lambda ()
+;;             (require 'ruby-electric)
+;;             (ruby-electric-mode t)))
 
 (add-to-list 'auto-mode-alist
              '("\\(\\.\\(rb\\|rake\\|gemspec\\)\\|Rakefile\\|Gemfile\\|prawn\\)$" . ruby-mode))
+
+(setq lsp-clients-ruby-lsp-server-executable "ruby-lsp")
+(add-to-list 'lsp-language-id-configuration '(ruby-mode . "ruby"))
+(add-hook 'ruby-mode-hook #'lsp)
+(setq lsp-clients-ruby-language-server-command '("ruby-lsp"))
 
 (require 'rubocop)
 (add-hook 'ruby-mode-hook 'rubocop-mode)
