@@ -9,9 +9,6 @@
 ;; - http://alexicalmistake.com/2008/07/experiments-in-emacs/
 
 
-;; aspell {improvement over ispell}
-(setq-default ispell-program-name "aspell")
-
 ;; org-mode
 (require 'org)
 
@@ -23,8 +20,7 @@
 ;; org mode hook.
 (add-hook 'org-mode-hook
           (lambda ()
-            (setq fill-column 72)       ; column width
-            (flyspell-mode 1)))         ; fly spell mode.
+            (setq fill-column 72)))       ; column width
 
 
 ;; TODO sequences
