@@ -31,8 +31,3 @@ have()
    PATH=$PATH:/sbin:/usr/sbin:/usr/local/sbin type $1 &>/dev/null &&
    have="yes"
 }
-
-# install texmf customizations.
-# https://help.ubuntu.com/community/LaTeX
-cp -rf texmf $HOME/
-have texhash && texhash $HOME/texmf
